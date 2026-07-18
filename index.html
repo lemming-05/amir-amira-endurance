@@ -16,7 +16,7 @@
     <header class="navbar">
         <!-- Replace your current logo div with this exact code -->
         <div class="logo">
-            <img src="logo.png" alt="Amir Amira Endurance Management Logo">
+            <img src="logo.png" alt="Amir Amira Endurance">
         </div>
         <nav>
             <ul class="nav-links">
@@ -70,10 +70,18 @@
         <div class="container form-container">
             <h2>Ready to Begin the Journey?</h2>
             <p>Leave your details below to schedule a consultation with our endurance coaching staff.</p>
-            <form class="contact-form">
-                <input type="text" placeholder="Your Name" required>
-                <input type="email" placeholder="Your Email" required>
-                <textarea placeholder="Tell us about your horse and experience level..." rows="5" required></textarea>
+            <!-- Replace your current form with this, inserting your Formspree URL -->
+            <form class="contact-form" action="https://formspree.io/f/xwvglgbk" method="POST">
+                
+                <!-- Added name="name" -->
+                <input type="text" name="name" placeholder="Your Name" required>
+                
+                <!-- Added name="email" -->
+                <input type="email" name="email" placeholder="Your Email" required>
+                
+                <!-- Added name="message" -->
+                <textarea name="message" placeholder="Tell us about your horse and experience level..." rows="5" required></textarea>
+                
                 <button type="submit" class="btn">Submit Inquiry</button>
             </form>
         </div>
