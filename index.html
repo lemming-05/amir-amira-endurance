@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Amir Amira | Equestrian Trail Management</title>
+    <link rel="icon" type="image/png" href="logo1.png">
     <link rel="stylesheet" href="style.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,9 +15,9 @@
 
     <!-- Navigation -->
     <header class="navbar">
-        <!-- Replace your current logo div with this exact code -->
         <div class="logo">
-            Amir Amira Endurance
+            <img src="logo1.png" alt="Amir Amira Endurance Management">
+            <span>Amir Amira Endurance Management</span>
         </div>
         <nav>
             <ul class="nav-links">
@@ -28,7 +29,7 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="hero">
+    <section class="hero hidden">
         <div class="hero-content">
             <h1>Master the Long Distance</h1>
             <p>Training, strategy, and conditioning built for the ultimate partnership between horse and rider.</p>
@@ -40,24 +41,24 @@
     <section id="about" class="about-section">
         <div class="container">
             <h2>The Spirit of Endurance</h2>
-            <p>Endurance riding isn't just a race; it is a true test of horsemanship. Spanning distances from 50 to 160 kilometers, it requires pacing, vet-gate strategy, and a profound understanding of your horse's physiological limits.</p>
+            <p>Endurance riding isn't just a race, it is a true test of horsemanship. Spanning distances from 50 to 160 kilometers, it requires pacing, vet-gate strategy, and a profound understanding of your horse's physiological limits.</p>
         </div>
     </section>
 
     <!-- Services Grid -->
     <section id="services" class="services-section">
-        <div class="container">
+        <div class="container hidden">
             <h2>Our Core Pillars</h2>
             <div class="grid">
-                <div class="card">
+                <div class="card prep-card hidden">
                     <h3>Physiological Prep</h3>
                     <p>Tailored heart-rate recovery programs and metabolic tracking to ensure your equine partner is always in peak condition.</p>
                 </div>
-                <div class="card">
+                <div class="card pacing-card hidden">
                     <h3>Pacing & Strategy</h3>
                     <p>Learn to map out terrain, plan vet-gate hold times, and execute optimal speed profiles for variable elevation changes.</p>
                 </div>
-                <div class="card">
+                <div class="card rider-card hidden">
                     <h3>Rider Conditioning</h3>
                     <p>Core stability, posture refinement, and mental resilience training specifically structured for long hours in the saddle.</p>
                 </div>
@@ -92,5 +93,27 @@
         <p>&copy; 2026 Apex Endurance Management. All Rights Reserved.</p>
     </footer>
 
+</body>
+
+<!-- Add this right before the closing </body> tag -->
+    <script>
+        // 1. Create the observer (the motion sensor)
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    // When the element enters the screen, add the 'show' class
+                    entry.target.classList.add('show');
+                } else {
+                    // Optional: Remove the 'show' class when it leaves the screen
+                    // so it disappears again when you scroll away!
+                    entry.target.classList.remove('show');
+                }
+            });
+        });
+
+        // 2. Tell the observer which elements to watch
+        const hiddenElements = document.querySelectorAll('.hidden');
+        hiddenElements.forEach((el) => observer.observe(el));
+    </script>
 </body>
 </html>

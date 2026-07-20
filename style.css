@@ -40,24 +40,26 @@ body {
     align-items: center;
     padding: 10px 5%;
     background-color: var(--primary-color);
-    position: sticky;
+    
     top: 0;
     z-index: 1000;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
 .navbar .logo {
+    display: flex;
+    align-items: center;    /* Vertically centers the image and text */
+    gap: 15px;              /* Adds a clean space between seahorse and text */
+    color: var(--accent-color); /* Keeps your text gold */
     font-family: var(--font-heading);
-    color: var(--accent-color);
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: 700;
 }
 
 .navbar .logo img {
-    height: 70px;                     /* Adjusts the height of your seahorse logo */
-    width: auto;                      /* Keeps the logo aspect ratio perfect */
+    height: 80px;           /* Increases the size of the seahorse */
+    width: auto;
     display: block;
-    border-radius: 4px;
 }
 
 .nav-links {
@@ -82,8 +84,7 @@ body {
 /* --- HERO SECTION --- */
 .hero {
     height: 80vh;
-    background: linear-gradient(rgba(28, 53, 45, 0.75), rgba(28, 53, 45, 0.75)), 
-                url('https://images.unsplash.com/photo-1598974357801-aecae02a500f?q=80&w=1920') no-repeat center center/cover;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('endurance 1.jpg');
     display: flex;
     justify-content: center;
     align-items: center;
@@ -130,20 +131,25 @@ body {
 /* --- SECTIONS --- */
 .about-section {
     text-align: center;
-    background-color: #f4f2ed;
+    background: linear-gradient(rgba(28, 53, 45, 0.75), rgba(28, 53, 45, 0.75)), 
+             url('https://images.unsplash.com/photo-1598974357801-aecae02a500f?q=80&w=1920') no-repeat center center/cover;
 }
 
 .about-section h2 {
     font-family: var(--font-heading);
     font-size: 2.5rem;
-    color: var(--primary-color);
+    color: var(--accent-color);
     margin-bottom: 25px;
 }
 
 .about-section p {
-    max-width: 800px;
-    margin: 0 auto;
-    font-size: 1.1rem;
+    color: #f8f9fa;            /* Changes the text to a soft, readable off-white */
+    font-size: 1.1rem;         /* Bumps up the size slightly for readability */
+    line-height: 1.8;          /* Adds breathing room between the lines of text */
+    max-width: 800px;          /* Prevents the text from stretching too wide on desktop */
+    margin: 20px auto 0;       /* Centers the text block and adds space below the heading */
+    font-weight: 300;          /* Gives it a slightly lighter, more elegant weight */
+    letter-spacing: 0.5px;
 }
 
 /* --- SERVICES GRID --- */
@@ -161,24 +167,51 @@ body {
     gap: 30px;
 }
 
+/* 1. Base Card Updates to handle the new images */
 .card {
-    background-color: var(--text-light);
-    padding: 40px 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-    border-top: 4px solid var(--primary-color);
-    transition: transform 0.3s ease;
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+    border-top: none; 
+    
+    /* 1. Spacing to keep text off the edges */
+    padding: 40px 30px; 
+    
+    /* 2. The Rounded Corners */
+    border-radius: 24px; 
+    
+    /* 3. The Drop Shadow (adds depth so they float off the background) */
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15); 
+    
+    /* 4. Smooth transition for the hover effect below */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Make sure the headings stand out in gold */
+.card h3 {
+    color: var(--accent-color); 
+    /* Or use #d4af37 if you don't have the variable set up */
+}
+
+/* 2. Assign the unique backgrounds with a 75% dark overlay */
+.prep-card {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('prep.jpg');
+}
+
+.pacing-card {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('pacing.jpg');
+}
+
+.rider-card {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('rider.jpg');
 }
 
 .card:hover {
     transform: translateY(-5px);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.2);
 }
 
-.card h3 {
-    font-family: var(--font-heading);
-    margin-bottom: 15px;
-    color: var(--primary-color);
-}
+
 
 /* --- CONTACT FORM --- */
 .contact-section {
@@ -250,4 +283,18 @@ footer {
     .container {
         padding: 50px 0;
     }
+}
+
+.hidden {
+    opacity: 0;
+    filter: blur(5px); /* Optional: adds a slight blur like Porsche does */
+    transform: translateY(40px); /* Pushes the element down 40 pixels */
+    transition: all 1s ease-out; /* Makes the transition smooth and slow */
+}
+
+/* 2. The ending state: visible, sharp, and in its normal position */
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
 }
