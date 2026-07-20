@@ -155,20 +155,11 @@ body {
 }
 
 /* --- SERVICES SECTION (PILLARS) --- */
-.services-section {
-    padding: 80px 20px;
-    /* Soft overlay for legibility, focal point set to show the rider */
-    background-image: linear-gradient(rgba(247, 246, 242, 0.15), rgba(247, 246, 242, 0.15)), url('endurance 2.jpg');
-    background-size: cover;
-    background-position: center 15%; 
-    background-repeat: no-repeat;
-}
-
 .services-section h2 {
     text-align: center;
     font-family: var(--font-heading);
     font-size: 2.5rem;
-    color: var(--primary-color); /* Set to light to contrast against the photo */
+    color: var(--primary-color);
     margin-bottom: 50px;
 }
 
