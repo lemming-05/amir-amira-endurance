@@ -119,6 +119,13 @@
         // 2. Tell the observer which elements to watch
         const hiddenElements = document.querySelectorAll('.hidden');
         hiddenElements.forEach((el) => observer.observe(el));
+
+        const menu = document.querySelector('#mobile-menu');
+        const menuLinks = document.querySelector('.nav-links');
+
+        menu.addEventListener('click', function() {
+            menuLinks.classList.toggle('active');
+        });
     </script>
 </body>
 </html>
