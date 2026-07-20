@@ -26,11 +26,32 @@ body {
     line-height: 1.6;
 }
 
+/* --- COMPONENTS --- */
 .container {
     width: 90%;
     max-width: 1100px;
     margin: 0 auto;
     padding: 80px 0;
+}
+
+.btn {
+    display: inline-block;
+    padding: 16px 30px;
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+    background-color: #e5c158;
+    transform: translateY(-2px);
 }
 
 /* --- NAVIGATION --- */
@@ -40,7 +61,6 @@ body {
     align-items: center;
     padding: 10px 5%;
     background-color: var(--primary-color);
-    
     top: 0;
     z-index: 1000;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
@@ -48,16 +68,16 @@ body {
 
 .navbar .logo {
     display: flex;
-    align-items: center;    /* Vertically centers the image and text */
-    gap: 15px;              /* Adds a clean space between seahorse and text */
-    color: var(--accent-color); /* Keeps your text gold */
+    align-items: center;
+    gap: 15px;
+    color: var(--accent-color);
     font-family: var(--font-heading);
     font-size: 1.2rem;
     font-weight: 700;
 }
 
 .navbar .logo img {
-    height: 80px;           /* Increases the size of the seahorse */
+    height: 80px;
     width: auto;
     display: block;
 }
@@ -85,6 +105,8 @@ body {
 .hero {
     height: 80vh;
     background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('endurance 1.jpg');
+    background-size: cover;
+    background-position: center 10%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -107,32 +129,12 @@ body {
     font-weight: 300;
 }
 
-/* --- BUTTONS --- */
-.btn {
-    display: inline-block;
-    padding: 12px 30px;
-    background-color: var(--accent-color);
-    color: var(--primary-color);
-    text-decoration: none;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.btn:hover {
-    background-color: #e5c158;
-    transform: translateY(-2px);
-}
-
-/* --- SECTIONS --- */
+/* --- ABOUT SECTION --- */
 .about-section {
     text-align: center;
+    padding: 80px 20px;
     background: linear-gradient(rgba(28, 53, 45, 0.75), rgba(28, 53, 45, 0.75)), 
-             url('https://images.unsplash.com/photo-1598974357801-aecae02a500f?q=80&w=1920') no-repeat center center/cover;
+                url('https://images.unsplash.com/photo-1598974357801-aecae02a500f?q=80&w=1920') no-repeat center center/cover;
 }
 
 .about-section h2 {
@@ -143,21 +145,30 @@ body {
 }
 
 .about-section p {
-    color: #f8f9fa;            /* Changes the text to a soft, readable off-white */
-    font-size: 1.1rem;         /* Bumps up the size slightly for readability */
-    line-height: 1.8;          /* Adds breathing room between the lines of text */
-    max-width: 800px;          /* Prevents the text from stretching too wide on desktop */
-    margin: 20px auto 0;       /* Centers the text block and adds space below the heading */
-    font-weight: 300;          /* Gives it a slightly lighter, more elegant weight */
+    color: #f8f9fa;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 20px auto 0;
+    font-weight: 300;
     letter-spacing: 0.5px;
 }
 
-/* --- SERVICES GRID --- */
+/* --- SERVICES SECTION (PILLARS) --- */
+.services-section {
+    padding: 80px 20px;
+    /* Soft overlay for legibility, focal point set to show the rider */
+    background-image: linear-gradient(rgba(247, 246, 242, 0.15), rgba(247, 246, 242, 0.15)), url('endurance 2.jpg');
+    background-size: cover;
+    background-position: center 15%; 
+    background-repeat: no-repeat;
+}
+
 .services-section h2 {
     text-align: center;
     font-family: var(--font-heading);
     font-size: 2.5rem;
-    color: var(--primary-color);
+    color: var(--primary-color); /* Set to light to contrast against the photo */
     margin-bottom: 50px;
 }
 
@@ -167,57 +178,36 @@ body {
     gap: 30px;
 }
 
-/* 1. Base Card Updates to handle the new images */
 .card {
     background-size: cover;
     background-position: center;
     color: #ffffff;
-    border-top: none; 
-    
-    /* 1. Spacing to keep text off the edges */
-    padding: 40px 30px; 
-    
-    /* 2. The Rounded Corners */
-    border-radius: 24px; 
-    
-    /* 3. The Drop Shadow (adds depth so they float off the background) */
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15); 
-    
-    /* 4. Smooth transition for the hover effect below */
+    padding: 40px 30px;
+    border-radius: 24px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Make sure the headings stand out in gold */
 .card h3 {
-    color: var(--accent-color); 
-    /* Or use #d4af37 if you don't have the variable set up */
+    color: var(--accent-color);
+    margin-bottom: 10px;
 }
 
-/* 2. Assign the unique backgrounds with a 75% dark overlay */
-.prep-card {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('prep.jpg');
-}
-
-.pacing-card {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('pacing.jpg');
-}
-
-.rider-card {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('rider.jpg');
-}
+.prep-card { background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('prep.jpg'); }
+.pacing-card { background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('pacing.jpg'); }
+.rider-card { background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('rider.jpg'); }
 
 .card:hover {
     transform: translateY(-5px);
     box-shadow: 0 25px 45px rgba(0, 0, 0, 0.2);
 }
 
-
-
 /* --- CONTACT FORM --- */
 .contact-section {
     background-color: var(--primary-color);
     color: var(--text-light);
     text-align: center;
+    padding: 80px 20px;
 }
 
 .form-container h2 {
@@ -237,30 +227,38 @@ body {
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 20px;
 }
 
 .contact-form input, 
 .contact-form textarea {
     width: 100%;
-    padding: 15px;
-    border: 1px solid rgba(255,255,255,0.2);
-    border-radius: 4px;
-    background-color: rgba(255,255,255,0.05);
+    padding: 16px 20px;
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 8px;
+    background-color: rgba(0,0,0,0.2);
     color: var(--text-light);
     font-family: var(--font-body);
-}
-
-.contact-form input::placeholder, 
-.contact-form textarea::placeholder {
-    color: rgba(255,255,255,0.6);
+    transition: all 0.3s ease;
 }
 
 .contact-form input:focus, 
 .contact-form textarea:focus {
-    outline: 2px solid var(--accent-color);
-    background-color: rgba(255,255,255,0.1);
+    outline: none;
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.2);
+    background-color: rgba(0,0,0,0.4);
 }
+
+/* Custom Scrollbar for Textarea */
+.contact-form textarea {
+    scrollbar-width: thin;
+    scrollbar-color: var(--accent-color) rgba(255, 255, 255, 0.05);
+}
+
+.contact-form textarea::-webkit-scrollbar { width: 8px; }
+.contact-form textarea::-webkit-scrollbar-track { background: rgba(255, 255, 255, 0.05); border-radius: 0 4px 4px 0; }
+.contact-form textarea::-webkit-scrollbar-thumb { background-color: var(--accent-color); border-radius: 4px; }
 
 /* --- FOOTER --- */
 footer {
@@ -271,45 +269,70 @@ footer {
     font-size: 0.85rem;
 }
 
-/* --- RESPONSIVE DESIGN --- */
-@media (max-width: 768px) {
-    .navbar {
-        flex-direction: column;
-        gap: 15px;
-    }
-    .hero-content h1 {
-        font-size: 2.3rem;
-    }
-    .container {
-        padding: 50px 0;
-    }
-}
-
+/* --- ANIMATIONS --- */
 .hidden {
     opacity: 0;
-    filter: blur(5px); /* Optional: adds a slight blur like Porsche does */
-    transform: translateY(40px); /* Pushes the element down 40 pixels */
-    transition: all 1s ease-out; /* Makes the transition smooth and slow */
+    filter: blur(5px);
+    transform: translateY(40px);
+    transition: all 1s ease-out;
 }
 
-/* 2. The ending state: visible, sharp, and in its normal position */
 .show {
     opacity: 1;
     filter: blur(0);
     transform: translateY(0);
 }
 
+/* --- RESPONSIVE DESIGN --- */
 @media (max-width: 768px) {
+    .navbar { flex-direction: column; gap: 15px; }
+    .hero-content h1 { font-size: 2.3rem; }
+    
     .hero {
-        /* 1. Reduce the height: 
-           Lowering the top/bottom padding prevents the section from being 
-           too tall, meaning the image won't have to zoom in as much. */
-        padding: 100px 20px; 
-        
-        /* 2. Shift the focal point: 
-           This pushes the image slightly to the left so the center-right 
-           action (the main rider) is visible on the narrow screen. 
-           You can tweak the '65%' up or down to frame it perfectly. */
-        background-position: 65% center; 
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: top center;
+        background-color: #1c352d;
+        padding: 250px 20px 60px;
+    }
+}
+
+/* --- MOBILE NAVBAR REFINEMENT --- */
+
+/* 1. Hide the hamburger on desktop, show on mobile */
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    transition: all 0.3s ease;
+    background-color: var(--accent-color);
+}
+
+/* 2. Mobile Logic */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block; /* Show hamburger on mobile */
+    }
+
+    .nav-links {
+        display: none; /* Hide links by default on mobile */
+        width: 100%;
+        flex-direction: column;
+        text-align: center;
+        padding-top: 20px;
+    }
+
+    .nav-links.active {
+        display: flex; /* Show links when toggled */
+    }
+
+    .navbar {
+        flex-wrap: wrap; /* Allows logo and hamburger to sit on top row */
     }
 }
