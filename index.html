@@ -19,11 +19,6 @@
             <img src="logo1.png" alt="Amir Amira Endurance Management">
             <span>Amir Amira Endurance Management</span>
         </div>
-        <div class="menu-toggle" id="mobile-menu">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </div>
         <nav>
             <ul class="nav-links">
                 <li><a href="#about">The Sport</a></li>
@@ -119,13 +114,6 @@
         // 2. Tell the observer which elements to watch
         const hiddenElements = document.querySelectorAll('.hidden');
         hiddenElements.forEach((el) => observer.observe(el));
-
-        const menu = document.querySelector('#mobile-menu');
-        const menuLinks = document.querySelector('.nav-links');
-
-        menu.addEventListener('click', function() {
-            menuLinks.classList.toggle('active');
-        });
     </script>
 </body>
 </html>
