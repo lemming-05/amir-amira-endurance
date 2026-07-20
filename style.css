@@ -298,3 +298,18 @@ footer {
     filter: blur(0);
     transform: translateY(0);
 }
+
+@media (max-width: 768px) {
+    .hero {
+        /* 1. Reduce the height: 
+           Lowering the top/bottom padding prevents the section from being 
+           too tall, meaning the image won't have to zoom in as much. */
+        padding: 100px 20px; 
+        
+        /* 2. Shift the focal point: 
+           This pushes the image slightly to the left so the center-right 
+           action (the main rider) is visible on the narrow screen. 
+           You can tweak the '65%' up or down to frame it perfectly. */
+        background-position: 65% center; 
+    }
+}
