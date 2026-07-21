@@ -19,10 +19,21 @@
             <img src="logo1.png" alt="Amir Amira Endurance Management">
             <span>Amir Amira Endurance Management</span>
         </div>
+        
+        <!-- Mobile Menu Hamburger Icon -->
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+
         <nav>
             <ul class="nav-links">
                 <li><a href="#about">The Sport</a></li>
+                <li><a href="#founders">Founders</a></li>
                 <li><a href="#services">Our Programs</a></li>
+                <li><a href="#calendar">Calendar</a></li>
+                <li><a href="#faq">FAQ</a></li>
                 <li><a href="#contact">Join Us</a></li>
             </ul>
         </nav>
@@ -45,44 +56,96 @@
         </div>
     </section>
 
-    <!-- Services Grid -->
-    <section id="services" class="services-section">
+    <!-- Meet the Founders Section -->
+    <section id="founders" class="coaches-section">
         <div class="container hidden">
-            <h2>Our Core Pillars</h2>
-            <div class="grid">
-                <div class="card prep-card hidden">
-                    <h3>Physiological Prep</h3>
-                    <p>Tailored heart-rate recovery programs and metabolic tracking to ensure your equine partner is always in peak condition.</p>
+            <h2>Meet The Founders</h2>
+            <p class="section-subtitle">Dedicated to elite endurance performance and equine welfare.</p>
+            
+            <div class="coaches-grid">
+                <div class="coach-card">
+                    <div class="coach-img-wrapper">
+                        <img src="amir-portrait.jpg" alt="Mohammad Azhar Bin Abu Bakar">
+                    </div>
+                    <h3>Amir</h3>
+                    <span class="coach-role">Head Endurance Strategist</span>
+                    <p>Specializing in metabolic pacing, terrain management, and race-day tactics across international distances.</p>
                 </div>
-                <div class="card pacing-card hidden">
-                    <h3>Pacing & Strategy</h3>
-                    <p>Learn to map out terrain, plan vet-gate hold times, and execute optimal speed profiles for variable elevation changes.</p>
-                </div>
-                <div class="card rider-card hidden">
-                    <h3>Rider Conditioning</h3>
-                    <p>Core stability, posture refinement, and mental resilience training specifically structured for long hours in the saddle.</p>
+                <div class="coach-card">
+                    <div class="coach-img-wrapper">
+                        <img src="amira-portrait.jpg" alt="Muhammad Syariff Bin Mohammad Azhar">
+                    </div>
+                    <h3>Amira</h3>
+                    <span class="coach-role">Assistant Endurance Management & Marketing</span>
+                    <p>Focused on heart-rate recovery optimization, rider biomechanics, and personalized fitness regimens.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Form -->
+    <!-- Services Grid (Our Core Pillars) -->
+    <section id="services" class="services-section">
+        <div class="container hidden">
+            <h2>Our Core Pillars</h2>
+            <div class="grid">
+                <div class="card prep-card hidden" onclick="openModal('prep-modal')">
+                    <h3>Physiological Prep</h3>
+                    <p>Tailored heart-rate recovery programs and metabolic tracking to ensure your equine partner is in peak condition.</p>
+                    <span class="card-hint">Click for details →</span>
+                </div>
+                <div class="card pacing-card hidden" onclick="openModal('pacing-modal')">
+                    <h3>Pacing & Strategy</h3>
+                    <p>Learn to map out terrain, plan vet-gate hold times, and execute optimal speed profiles for variable elevation changes.</p>
+                    <span class="card-hint">Click for details →</span>
+                </div>
+                <div class="card rider-card hidden" onclick="openModal('rider-modal')">
+                    <h3>Rider Conditioning</h3>
+                    <p>Core stability, posture refinement, and mental resilience training specifically structured for long hours in the saddle.</p>
+                    <span class="card-hint">Click for details →</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal Popup Container -->
+    <div id="modal-overlay" class="modal-overlay" onclick="closeModal()">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <button class="modal-close" onclick="closeModal()">&times;</button>
+            <div id="modal-body"></div>
+        </div>
+    </div>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq-section">
+        <div class="container hidden">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-accordion">
+                <div class="faq-item">
+                    <button class="faq-question">What fitness level is required for horse and rider? <span class="faq-icon">+</span></button>
+                    <div class="faq-answer">
+                        <p>We work with riders from novice distances (20km–40km) up to elite international endurance rides (120km+). Programs are customized to your current baseline.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">How are coaching sessions structured? <span class="faq-icon">+</span></button>
+                    <div class="faq-answer">
+                        <p>Sessions include tailored interval workouts for your horse, and strategy briefs prior to competition days.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
     <section id="contact" class="contact-section">
         <div class="container form-container">
             <h2>Ready to Begin the Journey?</h2>
             <p>Leave your details below to schedule a consultation with our endurance coaching staff.</p>
-            <!-- Replace your current form with this, inserting your Formspree URL -->
+            
             <form class="contact-form" action="https://formspree.io/f/xwvglgbk" method="POST">
-                
-                <!-- Added name="name" -->
                 <input type="text" name="name" placeholder="Your Name" required>
-                
-                <!-- Added name="email" -->
                 <input type="email" name="email" placeholder="Your Email" required>
-                
-                <!-- Added name="message" -->
                 <textarea name="message" placeholder="Tell us about your horse and experience level..." rows="5" required></textarea>
-                
                 <button type="submit" class="btn">Submit Inquiry</button>
             </form>
         </div>
@@ -93,27 +156,68 @@
         <p>&copy; 2026 IrfanAl DEV. All Rights Reserved.</p>
     </footer>
 
-</body>
+    <!-- Floating WhatsApp Quick-Chat Button -->
+    <a href="https://wa.me/60123456789?text=Hi!%20I%20would%20like%20to%20inquire%20about%20endurance%20coaching." class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
+        <svg viewBox="0 0 32 32" width="28" height="28" fill="#ffffff">
+            <path d="M16 2a13.9 13.9 0 0 0-11.8 21.3L2 30l6.9-2.2A13.9 13.9 0 1 0 16 2zm7.9 19.6c-.3.9-1.8 1.7-2.5 1.8-.7.1-1.6.2-5.1-1.2-4.4-1.8-7.3-6.2-7.5-6.5-.2-.3-1.8-2.4-1.8-4.6s1.1-3.3 1.5-3.7c.4-.4.9-.5 1.2-.5h.9c.3 0 .6 0 .9.7.3.7 1.1 2.7 1.2 2.9.1.2.1.4 0 .6-.1.2-.2.4-.4.6-.2.2-.4.4-.2.8.5.9 1.8 2.4 3.3 3.3.4.2.8.2 1-.1.2-.3.9-1.1 1.2-1.4.3-.3.6-.3.9-.2.3.1 2.1 1 2.5 1.2.4.2.7.3.8.5.1.2.1 1.1-.2 2z"/>
+        </svg>
+    </a>
 
-<!-- Add this right before the closing </body> tag -->
+    <!-- JavaScript Interactions -->
     <script>
-        // 1. Create the observer (the motion sensor)
+        // 1. Scroll Animation Observer
         const observer = new IntersectionObserver((entries) => {
             entries.forEach((entry) => {
                 if (entry.isIntersecting) {
-                    // When the element enters the screen, add the 'show' class
                     entry.target.classList.add('show');
                 } else {
-                    // Optional: Remove the 'show' class when it leaves the screen
-                    // so it disappears again when you scroll away!
                     entry.target.classList.remove('show');
                 }
             });
         });
 
-        // 2. Tell the observer which elements to watch
         const hiddenElements = document.querySelectorAll('.hidden');
         hiddenElements.forEach((el) => observer.observe(el));
+
+        // 2. Mobile Menu Toggle
+        const menuToggle = document.getElementById('mobile-menu');
+        const navLinks = document.querySelector('.nav-links');
+
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // 3. Interactive Modals for Core Pillars
+        const modalData = {
+            'prep-modal': '<h2>Physiological Prep</h2><p style="margin-top:15px; color:#444;">Includes structured metabolic tracking, heart-rate recovery analysis, custom electrolyte regimens, and pre-race vet gate strategy to ensure peak equine health.</p>',
+            'pacing-modal': '<h2>Pacing & Strategy</h2><p style="margin-top:15px; color:#444;">Learn terrain mapping, elevation management, optimal speed profiles, and vet-hold time management for 40km–120km+ distances.</p>',
+            'rider-modal': '<h2>Rider Conditioning</h2><p style="margin-top:15px; color:#444;">Targeted core stability, posture refinement, mental resilience coaching, and saddle endurance designed for multi-hour rides.</p>'
+        };
+
+        function openModal(modalKey) {
+            document.getElementById('modal-body').innerHTML = modalData[modalKey];
+            document.getElementById('modal-overlay').style.display = 'flex';
+        }
+
+        function closeModal() {
+            document.getElementById('modal-overlay').style.display = 'none';
+        }
+
+        // 4. FAQ Accordion Toggle
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const answer = button.nextElementSibling;
+                const isOpen = answer.style.display === 'block';
+                
+                document.querySelectorAll('.faq-answer').forEach(a => a.style.display = 'none');
+                document.querySelectorAll('.faq-icon').forEach(i => i.textContent = '+');
+                
+                if (!isOpen) {
+                    answer.style.display = 'block';
+                    button.querySelector('.faq-icon').textContent = '-';
+                }
+            });
+        });
     </script>
 </body>
 </html>

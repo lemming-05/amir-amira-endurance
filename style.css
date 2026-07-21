@@ -61,6 +61,7 @@ body {
     align-items: center;
     padding: 10px 5%;
     background-color: var(--primary-color);
+    position: sticky;
     top: 0;
     z-index: 1000;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
@@ -99,6 +100,21 @@ body {
 
 .nav-links a:hover {
     color: var(--accent-color);
+}
+
+/* Mobile Hamburger Menu */
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+}
+
+.menu-toggle .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    transition: all 0.3s ease;
+    background-color: var(--accent-color);
 }
 
 /* --- HERO SECTION --- */
@@ -154,6 +170,61 @@ body {
     letter-spacing: 0.5px;
 }
 
+/* --- FOUNDERS SECTION --- */
+.coaches-section {
+    padding: 80px 20px;
+    background-color: var(--bg-light);
+    text-align: center;
+}
+
+.coaches-section h2 {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    color: var(--primary-color);
+}
+
+.section-subtitle {
+    color: #666;
+    margin-bottom: 40px;
+}
+
+.coaches-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+}
+
+.coach-card {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.coach-img-wrapper {
+    width: 140px;
+    height: 140px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid var(--accent-color);
+}
+
+.coach-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.coach-role {
+    display: block;
+    color: var(--accent-color);
+    font-weight: 600;
+    font-size: 0.85rem;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
 /* --- SERVICES SECTION (PILLARS) --- */
 .services-section h2 {
     text-align: center;
@@ -177,11 +248,20 @@ body {
     border-radius: 24px;
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
 }
 
 .card h3 {
     color: var(--accent-color);
     margin-bottom: 10px;
+}
+
+.card-hint {
+    display: inline-block;
+    margin-top: 15px;
+    font-size: 0.85rem;
+    color: var(--accent-color);
+    font-weight: 600;
 }
 
 .prep-card { background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('prep.jpg'); }
@@ -192,6 +272,106 @@ body {
     transform: translateY(-5px);
     box-shadow: 0 25px 45px rgba(0, 0, 0, 0.2);
 }
+
+/* Modal Popup */
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.7);
+    z-index: 2000;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: var(--bg-light);
+    padding: 40px;
+    border-radius: 16px;
+    max-width: 600px;
+    width: 90%;
+    position: relative;
+    border: 1px solid var(--accent-color);
+}
+
+.modal-close {
+    position: absolute;
+    top: 15px; right: 20px;
+    background: none; border: none;
+    font-size: 1.8rem; cursor: pointer;
+    color: var(--text-dark);
+}
+
+/* --- CALENDAR & FAQ --- */
+.calendar-section, .faq-section {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.calendar-section h2, .faq-section h2 {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 40px;
+}
+
+.calendar-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.calendar-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    text-align: left;
+}
+
+.cal-date {
+    background: var(--primary-color);
+    color: var(--accent-color);
+    padding: 10px 15px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.cal-date span { display: block; font-size: 0.75rem; }
+.cal-date strong { font-size: 1.2rem; }
+
+.btn-small {
+    padding: 8px 16px;
+    background: var(--accent-color);
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 6px;
+    font-size: 0.85rem;
+}
+
+/* FAQ Accordion */
+.faq-accordion { max-width: 800px; margin: 0 auto; text-align: left; }
+.faq-item { border-bottom: 1px solid #ddd; margin-bottom: 10px; }
+.faq-question {
+    width: 100%;
+    padding: 20px 0;
+    background: none; border: none;
+    text-align: left;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+}
+.faq-answer { display: none; padding-bottom: 20px; color: #555; }
 
 /* --- CONTACT FORM --- */
 .contact-section {
@@ -260,6 +440,27 @@ footer {
     font-size: 0.85rem;
 }
 
+/* --- FLOATING WHATSAPP BUTTON --- */
+.whatsapp-float {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background-color: #25d366;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    z-index: 1500;
+    transition: transform 0.3s ease;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+}
+
 /* --- ANIMATIONS --- */
 .hidden {
     opacity: 0;
@@ -276,7 +477,27 @@ footer {
 
 /* --- RESPONSIVE DESIGN --- */
 @media (max-width: 768px) {
-    .navbar { flex-direction: column; gap: 15px; }
+    .menu-toggle {
+        display: block;
+    }
+
+    .navbar {
+        flex-wrap: wrap;
+    }
+
+    .nav-links {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        text-align: center;
+        padding-top: 20px;
+        gap: 15px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
     .hero-content h1 { font-size: 2.3rem; }
     
     .hero {
@@ -285,5 +506,11 @@ footer {
         background-position: top center;
         background-color: #1c352d;
         padding: 250px 20px 60px;
+    }
+
+    .calendar-item {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
     }
 }
