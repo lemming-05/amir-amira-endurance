@@ -439,18 +439,33 @@ footer {
 @media (max-width: 768px) {
     .menu-toggle {
         display: block;
+        margin-left: auto;
     }
 
     .navbar {
-        flex-wrap: wrap;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap; /* Allows menu links to wrap to line 2 */
+        padding: 12px 4%;
+    }
+
+    .navbar .logo {
+        max-width: calc(100% - 50px); /* Leaves clear space for the hamburger icon */
+        gap: 10px;
     }
 
     .navbar .logo img {
-        height: 50px; /* Slightly scaled for phone header height balance */
+        height: 45px; /* Slightly scaled for phone header height balance */
     }
 
     .navbar .logo span {
-        font-size: 0.95rem; /* Keeps title crisp on small screens */
+        font-size: 0.85rem; /* Keeps title crisp on small screens */
+        line-height: 1.2;
+    }
+
+    nav {
+        width: 100%;
     }
 
     .nav-links {
