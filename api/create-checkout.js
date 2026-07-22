@@ -23,7 +23,7 @@ module.exports = async (req, res) => {
         },
       ],
       mode: 'payment',
-      success_url: `${req.headers.origin}/index.html?payment=success`,
+      success_url: `${req.headers.origin}/index.html?payment=success.html`,
       cancel_url: `${req.headers.origin}/index.html?payment=cancelled`,
     });
 
