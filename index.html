@@ -64,15 +64,15 @@
             <div class="coaches-grid">
                 <div class="coach-card">
                     <div class="coach-img-wrapper">
-                        <img src="amir-portrait.jpg" alt="">
+                        <img src="profile1.jpeg" alt="profile1">
                     </div>
-                    <h3>Mohammad Azhar Bin Abu Bakar</h3>
+                    <h3>Mohammad Azhar Bin Abu Bakar (AMIR AMIRA)</h3>
                     <span class="coach-role">Head Endurance Strategist</span>
                     <p>Specializing in metabolic pacing, terrain management, and race-day tactics across international distances.</p>
                 </div>
                 <div class="coach-card">
                     <div class="coach-img-wrapper">
-                        <img src="amira-portrait.jpg" alt="">
+                        <img src="profile2.jpg" alt="profile2">
                     </div>
                     <h3>Muhammad Syariff Bin Mohammad Azhar</h3>
                     <span class="coach-role">Assistant Endurance Management & Marketing</span>
@@ -101,6 +101,11 @@
                     <h3>Rider Conditioning</h3>
                     <p>Core stability, posture refinement, and mental resilience training specifically structured for long hours in the saddle.</p>
                     <span class="card-hint">Click for details →</span>
+                </div>
+                <div class="card prep-card hidden" style="border: 2px solid var(--accent-color);">
+                    <h3>Video Tutorial Pass</h3>
+                    <p>Get instant access to our private Telegram vault featuring video guides on pacing, conditioning, and vet-gate strategy.</p>
+                    <button id="buy-btn" onclick="buyVideoPlan()" class="btn" style="margin-top: 15px;">Buy with FPX / Card (RM 150)</button>
                 </div>
             </div>
         </div>
@@ -152,7 +157,7 @@
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2026 IrfanAl DEV. All Rights Reserved.</p>
+        <p>&copy; 2026 IrfanAl Productions. All Rights Reserved.</p>
     </footer>
 
     <!-- Floating WhatsApp Quick-Chat Button -->
@@ -217,6 +222,32 @@
                 }
             });
         });
+        async function buyVideoPlan() {
+            const btn = document.getElementById('buy-btn');
+            btn.disabled = true;
+            btn.innerText = "Redirecting to Bank...";
+
+            try {
+                const response = await fetch('/api/create-checkout', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' }
+                });
+                const data = await response.json();
+
+                if (data.url) {
+                    window.location.href = data.url; // Redirects user to Stripe FPX/Card page
+                } else {
+                    alert("Could not start checkout. Please try again.");
+                    btn.disabled = false;
+                    btn.innerText = "Buy with FPX / Card (RM 150)";
+                }
+            } catch (error) {
+                console.error("Payment error:", error);
+                alert("Connection error. Please try again.");
+                btn.disabled = false;
+                btn.innerText = "Buy with FPX / Card (RM 150)";
+            }
+        }
     </script>
 </body>
 </html>

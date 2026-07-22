@@ -174,18 +174,22 @@ body {
 /* --- FOUNDERS SECTION --- */
 .coaches-section {
     padding: 80px 20px;
-    background-color: var(--bg-light);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('worldcup.jpeg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
     text-align: center;
 }
 
 .coaches-section h2 {
     font-family: var(--font-heading);
     font-size: 2.5rem;
-    color: var(--primary-color);
+    color: var(--accent-color);
 }
 
 .section-subtitle {
-    color: #666;
+    color: white;
     margin-bottom: 40px;
 }
 
