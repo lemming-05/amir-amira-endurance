@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Catalog | Amir Amira Endurance Management</title>
+    <link rel="icon" type="image/png" href="logo1.png">
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        /* Catalog-specific styles supplementing style.css */
+        .catalog-header {
+            background: linear-gradient(rgba(28, 53, 45, 0.9), rgba(28, 53, 45, 0.9)), url('endurance 1.jpg') center/cover;
+            padding: 80px 20px 60px;
+            text-align: center;
+            color: var(--text-light);
+        }
+        .catalog-header h1 {
+            font-family: var(--font-heading);
+            color: var(--accent-color);
+            font-size: clamp(2rem, 4vw, 3rem);
+            margin-bottom: 15px;
+        }
+        .catalog-header p {
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+            color: #e0e0e0;
+        }
+        .catalog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 40px;
+            margin-top: 40px;
+        }
+        .product-card {
+            background: #ffffff;
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            border: 1px solid #eae2d0;
+            display: flex;
+            flex-direction: column;
+            transition: var(--transition-smooth);
+        }
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+        }
+        .product-image {
+            height: 220px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+        .product-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: var(--accent-color);
+            color: var(--primary-color);
+            padding: 6px 12px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            border-radius: 20px;
+            text-transform: uppercase;
+        }
+        .product-content {
+            padding: 30px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        .product-content h3 {
+            font-family: var(--font-heading);
+            color: var(--primary-color);
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+        }
+        .product-features {
+            list-style: none;
+            margin-bottom: 25px;
+            flex-grow: 1;
+        }
+        .product-features li {
+            font-size: 0.95rem;
+            color: #555;
+            margin-bottom: 10px;
+            padding-left: 24px;
+            position: relative;
+        }
+        .product-features li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+        .product-footer {
+            border-top: 1px solid #eee;
+            padding-top: 20px;
+            text-align: center;
+        }
+        .product-price {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+        .btn-full {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation (Synchronized with index.html) -->
+    <header class="navbar">
+        <a href="index.html" class="logo">
+            <img src="logo1.png" alt="Amir Amira Endurance Management Logo">
+            <span data-i18n="nav-title">Amir Amira Endurance Management</span>
+        </a>
+
+        <!-- Mobile Menu Hamburger Toggle Button -->
+        <button id="mobile-menu" class="menu-toggle" aria-label="Toggle Navigation" aria-expanded="false">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+
+        <nav id="primary-nav">
+            <ul class="nav-links">
+                <li><a href="index.html#about" data-i18n="nav-sport">The Sport</a></li>
+                <li><a href="index.html#coaching" data-i18n="nav-coaching">Mobile Coaching</a></li>
+                <li><a href="index.html#services" data-i18n="nav-programs">Our Programs</a></li>
+                <li><a href="catalog.html" style="color: var(--accent-color);" data-i18n="nav-store">Digital Catalog</a></li>
+                <li><a href="index.html#faq" data-i18n="nav-faq">FAQ</a></li>
+                <li><a href="index.html#contact" data-i18n="nav-join">Contact Us</a></li>
+            </ul>
+        </nav>
+
+        <div class="lang-switcher" role="group" aria-label="Language Switcher">
+            <button id="lang-en" class="lang-btn active" onclick="switchLanguage('en')">EN</button>
+            <span class="lang-divider">|</span>
+            <button id="lang-bm" class="lang-btn" onclick="switchLanguage('bm')">BM</button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Catalog Header -->
+        <section class="catalog-header">
+            <h1 data-i18n="catalog-title">Digital Catalog & Vault</h1>
+            <p data-i18n="catalog-desc">Access exclusive video guides, endurance strategies, and conditioning modules directly on your devices.</p>
+        </section>
+
+        <!-- Product Grid -->
+        <section class="container">
+            <div class="catalog-grid">
+                
+                <!-- Main Product: Video Tutorial Pass -->
+                <div class="product-card">
+                    <div class="product-image" style="background-image: url('prep.jpg');">
+                        <span class="product-badge" data-i18n="badge-telegram">Telegram Access</span>
+                    </div>
+                    <div class="product-content">
+                        <h3 data-i18n="vault-title">Video Tutorial Pass</h3>
+                        <ul class="product-features">
+                            <li data-i18n="feat-1">Instant access to private Telegram vault</li>
+                            <li data-i18n="feat-2">Pacing & conditioning video guides</li>
+                            <li data-i18n="feat-3">Vet-gate strategy breakdowns</li>
+                        </ul>
+                        <div class="product-footer">
+                            <div class="product-price">RM 150.00</div>
+                            <button id="buy-btn" onclick="buyVideoPlan()" class="btn btn-full" data-i18n="buy-btn">Buy with FPX / Card</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Placeholder Product for Future Additions -->
+                <div class="product-card" style="opacity: 0.6; pointer-events: none;">
+                    <div class="product-image" style="background: #e0e0e0;">
+                        <span class="product-badge" style="background: #999; color: #fff;">Coming Soon</span>
+                    </div>
+                    <div class="product-content">
+                        <h3>Equine Nutrition Module</h3>
+                        <ul class="product-features">
+                            <li>Electrolyte management templates</li>
+                            <li>Pre-race feeding schedules</li>
+                            <li>Hydration optimization guides</li>
+                        </ul>
+                        <div class="product-footer">
+                            <div class="product-price">TBA</div>
+                            <button class="btn btn-full" style="background: #ccc; color: #666;">Coming Soon</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p data-i18n="footer-text">&copy; 2026 IrfanAl Productions. All Rights Reserved.</p>
+    </footer>
+
+    <!-- JavaScript Logic for Language, Navigation & Payment -->
+    <script>
+        // --- TRANSLATION DICTIONARY ---
+        const translations = {
+            en: {
+                "nav-title": "Amir Amira Endurance Management",
+                "nav-sport": "The Sport",
+                "nav-coaching": "Mobile Coaching",
+                "nav-programs": "Our Programs",
+                "nav-store": "Digital Catalog",
+                "nav-faq": "FAQ",
+                "nav-join": "Contact Us",
+                "catalog-title": "Digital Catalog & Vault",
+                "catalog-desc": "Access exclusive video guides, endurance strategies, and conditioning modules directly on your devices.",
+                "badge-telegram": "Telegram Access",
+                "vault-title": "Video Tutorial Pass",
+                "feat-1": "Instant access to private Telegram vault",
+                "feat-2": "Pacing & conditioning video guides",
+                "feat-3": "Vet-gate strategy breakdowns",
+                "buy-btn": "Buy with FPX / Card",
+                "footer-text": "© 2026 IrfanAl Productions. All Rights Reserved."
+            },
+            bm: {
+                "nav-title": "Pengurusan Endurance Amir Amira",
+                "nav-sport": "Sukan Ini",
+                "nav-coaching": "Mobile Coaching",
+                "nav-programs": "Program Kami",
+                "nav-store": "Katalog Digital",
+                "nav-faq": "Soalan Lazim",
+                "nav-join": "Hubungi Kami",
+                "catalog-title": "Katalog Digital & Vault",
+                "catalog-desc": "Akses panduan video eksklusif, strategi endurance, dan modul pengkondisian terus ke peranti anda.",
+                "badge-telegram": "Akses Telegram",
+                "vault-title": "Pas Tutorial Video",
+                "feat-1": "Akses segera ke vault Telegram peribadi",
+                "feat-2": "Panduan video kelajuan & pengkondisian",
+                "feat-3": "Pecahan strategi vet-gate",
+                "buy-btn": "Beli dengan FPX / Kad",
+                "footer-text": "© 2026 IrfanAl Productions. Hak Cipta Terpelihara."
+            }
+        };
+
+        // --- LANGUAGE SWITCHING ---
+        function switchLanguage(lang) {
+            localStorage.setItem('preferred_language', lang);
+            document.getElementById('lang-en').classList.toggle('active', lang === 'en');
+            document.getElementById('lang-bm').classList.toggle('active', lang === 'bm');
+
+            document.querySelectorAll('[data-i18n]').forEach(element => {
+                const key = element.getAttribute('data-i18n');
+                if (translations[lang] && translations[lang][key]) {
+                    element.textContent = translations[lang][key];
+                }
+            });
+        }
+
+        // --- MOBILE MENU TOGGLE ---
+        const menuToggle = document.getElementById('mobile-menu');
+        const navLinks = document.querySelector('.nav-links');
+
+        if (menuToggle && navLinks) {
+            menuToggle.addEventListener('click', () => {
+                const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+                menuToggle.setAttribute('aria-expanded', !isExpanded);
+                navLinks.classList.toggle('active');
+            });
+
+            document.querySelectorAll('.nav-links a').forEach(link => {
+                link.addEventListener('click', () => {
+                    navLinks.classList.remove('active');
+                    menuToggle.setAttribute('aria-expanded', 'false');
+                });
+            });
+        }
+
+        // --- PAYMENT CHECKOUT API CALL ---
+        async function buyVideoPlan() {
+            const btn = document.getElementById('buy-btn');
+            const currentLang = localStorage.getItem('preferred_language') || 'en';
+            
+            btn.disabled = true;
+            btn.innerText = currentLang === 'bm' ? "Sila Tunggu..." : "Redirecting to Bank...";
+
+            try {
+                const response = await fetch('/api/create-checkout', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' }
+                });
+                const data = await response.json();
+
+                if (data.url) {
+                    window.location.href = data.url; 
+                } else {
+                    alert(currentLang === 'bm' ? "Ralat sistem. Sila cuba lagi." : "Could not start checkout. Please try again.");
+                    btn.disabled = false;
+                    btn.innerText = translations[currentLang]["buy-btn"];
+                }
+            } catch (error) {
+                console.error("Payment error:", error);
+                alert(currentLang === 'bm' ? "Masalah sambungan. Sila cuba lagi." : "Connection error. Please try again.");
+                btn.disabled = false;
+                btn.innerText = translations[currentLang]["buy-btn"];
+            }
+        }
+
+        // --- INITIALIZATION ---
+        document.addEventListener('DOMContentLoaded', () => {
+            const savedLang = localStorage.getItem('preferred_language') || 'en';
+            switchLanguage(savedLang);
+        });
+    </script>
+</body>
+</html>

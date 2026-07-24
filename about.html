@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tentang Kami | Amir Amira Endurance Management</title>
+    <link rel="icon" type="image/png" href="logo1.png">
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Streamlined Navigation Header -->
+    <header class="navbar">
+        <a href="index.html" class="logo">
+            <img src="logo1.png" alt="Amir Amira Endurance Management Logo">
+            <span>PENGURUSAN ENDURANCE AMIR AMIRA</span>
+        </a>
+
+        <button id="mobile-menu" class="menu-toggle" aria-label="Toggle Navigation" aria-expanded="false">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+
+        <nav id="primary-nav">
+            <ul class="nav-links">
+                <li><a href="index.html" data-i18n="nav-home">Utama</a></li>
+                <li><a href="about.html" class="active" data-i18n="nav-about">Tentang Kami</a></li>
+                <li><a href="index.html#coaching" data-i18n="nav-coaching">Mobile Coaching</a></li>
+                <li><a href="catalog.html" data-i18n="nav-store">Katalog Digital</a></li>
+                <li><a href="index.html#contact" data-i18n="nav-join">Hubungi Kami</a></li>
+            </ul>
+        </nav>
+
+        <div class="lang-switcher" role="group" aria-label="Language Switcher">
+            <button id="lang-en" class="lang-btn" onclick="switchLanguage('en')">EN</button>
+            <span class="lang-divider">|</span>
+            <button id="lang-bm" class="lang-btn active" onclick="switchLanguage('bm')">BM</button>
+        </div>
+    </header>
+
+    <main>
+        <!-- About Page Hero Banner -->
+        <section class="hero" style="height: 45vh; min-height: 320px;">
+            <div class="hero-content">
+                <h1 data-i18n="about-hero-title">Tentang Amir Amira</h1>
+                <p data-i18n="about-hero-desc">Membentuk Atlet Kuda Endurance Melalui Sains Sukan & Pengalaman Lapangan.</p>
+            </div>
+        </section>
+
+        <!-- The Sport & Spirit Section -->
+        <section id="about" class="about-section">
+            <div class="container">
+                <h2 data-i18n="about-title">The Spirit of Endurance</h2>
+                <p data-i18n="about-desc">Endurance riding isn't just a race, it is a true test of horsemanship. Spanning distances from 50 to 160 kilometers, it requires pacing, vet-gate strategy, and a profound understanding of your horse's physiological limits.</p>
+            </div>
+        </section>
+
+        <!-- Founders Section -->
+        <section id="founders" class="coaches-section">
+            <div class="container">
+                <h2 data-i18n="founders-title">Meet The Founders</h2>
+                <p class="section-subtitle" data-i18n="founders-sub">Dedicated to elite endurance performance and equine welfare.</p>
+                
+                <div class="coaches-grid">
+                    <div class="coach-card">
+                        <div class="coach-img-wrapper">
+                            <img src="profile1.jpeg" alt="Mohammad Azhar Bin Abu Bakar">
+                        </div>
+                        <h3>Mohammad Azhar Bin Abu Bakar (AMIR AMIRA)</h3>
+                        <span class="coach-role" data-i18n="coach1-role">Head Endurance Strategist</span>
+                        <p data-i18n="coach1-desc">Specializing in metabolic pacing, terrain management, and race-day tactics across international distances.</p>
+                    </div>
+                    <div class="coach-card">
+                        <div class="coach-img-wrapper">
+                            <img src="profile2.jpg" alt="Muhammad Syariff Bin Mohammad Azhar">
+                        </div>
+                        <h3>Muhammad Syariff Bin Mohammad Azhar</h3>
+                        <span class="coach-role" data-i18n="coach2-role">Assistant Endurance Management & Marketing</span>
+                        <p data-i18n="coach2-desc">Focused on heart-rate recovery optimization, rider biomechanics, and personalized fitness regimens.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action Banner -->
+        <section class="contact-section" style="padding: 60px 20px;">
+            <div class="container form-container" style="padding: 0;">
+                <h2 data-i18n="cta-title">Sedia Bawa Kuda Anda Ke Tahap Seterusnya?</h2>
+                <p data-i18n="cta-desc" style="margin-bottom: 25px;">Terokai perkhidmatan Mobile Coaching on-site kami atau lihat panduan video digital kami.</p>
+                <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
+                    <a href="index.html#coaching" class="btn" data-i18n="cta-btn-coaching">Mobile Coaching</a>
+                    <a href="catalog.html" class="btn" style="background: transparent; border: 2px solid var(--accent-color); color: #fff;" data-i18n="cta-btn-catalog">Katalog Digital</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p data-i18n="footer-text">&copy; 2026 IrfanAl Productions. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Floating WhatsApp Quick-Chat Button -->
+    <a href="https://wa.me/601170332316?text=Hi!%20I%20would%20like%20to%20inquire%20about%20endurance%20coaching." class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat with us on WhatsApp">
+        <svg viewBox="0 0 32 32" width="28" height="28" fill="#ffffff" aria-hidden="true">
+            <path d="M16 2a13.9 13.9 0 0 0-11.8 21.3L2 30l6.9-2.2A13.9 13.9 0 1 0 16 2zm7.9 19.6c-.3.9-1.8 1.7-2.5 1.8-.7.1-1.6.2-5.1-1.2-4.4-1.8-7.3-6.2-7.5-6.5-.2-.3-1.8-2.4-1.8-4.6s1.1-3.3 1.5-3.7c.4-.4.9-.5 1.2-.5h.9c.3 0 .6 0 .9.7.3.7 1.1 2.7 1.2 2.9.1.2.1.4 0 .6-.1.2-.2.4-.4.6-.2.2-.4.4-.2.8.5.9 1.8 2.4 3.3 3.3.4.2.8.2 1-.1.2-.3.9-1.1 1.2-1.4.3-.3.6-.3.9-.2.3.1 2.1 1 2.5 1.2.4.2.7.3.8.5.1.2.1 1.1-.2 2z"/>
+        </svg>
+    </a>
+
+    <!-- JavaScript Logic -->
+    <script>
+        const translations = {
+            en: {
+                "nav-home": "Home",
+                "nav-about": "About Us",
+                "nav-coaching": "Mobile Coaching",
+                "nav-store": "Digital Catalog",
+                "nav-join": "Contact Us",
+                "about-hero-title": "About Amir Amira",
+                "about-hero-desc": "Developing Endurance Equine Athletes Through Sports Science & Field Experience.",
+                "about-title": "The Spirit of Endurance",
+                "about-desc": "Endurance riding isn't just a race, it is a true test of horsemanship. Spanning distances from 50 to 160 kilometers, it requires pacing, vet-gate strategy, and a profound understanding of your horse's physiological limits.",
+                "founders-title": "Meet The Founders",
+                "founders-sub": "Dedicated to elite endurance performance and equine welfare.",
+                "coach1-role": "Head Endurance Strategist",
+                "coach1-desc": "Specializing in metabolic pacing, terrain management, and race-day tactics across international distances.",
+                "coach2-role": "Assistant Endurance Management & Marketing",
+                "coach2-desc": "Focused on heart-rate recovery optimization, rider biomechanics, and personalized fitness regimens.",
+                "cta-title": "Ready to Take Your Horse to the Next Level?",
+                "cta-desc": "Explore our on-site Mobile Coaching service or check out our digital video guides.",
+                "cta-btn-coaching": "Mobile Coaching",
+                "cta-btn-catalog": "Digital Catalog",
+                "footer-text": "© 2026 IrfanAl Productions. All Rights Reserved."
+            },
+            bm: {
+                "nav-home": "Utama",
+                "nav-about": "Tentang Kami",
+                "nav-coaching": "Mobile Coaching",
+                "nav-store": "Katalog Digital",
+                "nav-join": "Hubungi Kami",
+                "about-hero-title": "Tentang Amir Amira",
+                "about-hero-desc": "Membentuk Atlet Kuda Endurance Melalui Sains Sukan & Pengalaman Lapangan.",
+                "about-title": "Semangat Endurance",
+                "about-desc": "Larian endurance bukan sekadar perlumbaan, ia adalah ujian sebenar kemahiran penunggang kuda. Merangkumi jarak dari 50 hingga 160 kilometer, ia memerlukan perancangan kelajuan, strategi vet-gate, dan kefahaman mendalam tentang had fisiologi kuda anda.",
+                "founders-title": "Kenali Pengasas Kami",
+                "founders-sub": "Berdedikasi untuk prestasi endurance elit dan kebajikan ekuin.",
+                "coach1-role": "Ketua Strategi Endurance",
+                "coach1-desc": "Pakar dalam kawalan kelajuan metabolik, pengurusan rupa bumi, dan taktik hari perlumbaan di seluruh jarak antarabangsa.",
+                "coach2-role": "Penolong Pengurusan Endurance & Pemasaran",
+                "coach2-desc": "Fokus pada pengoptimuman pemulihan kadar jantung, biomekanik penunggang, dan rejimen kecergasan peribadi.",
+                "cta-title": "Sedia Bawa Kuda Anda Ke Tahap Seterusnya?",
+                "cta-desc": "Terokai perkhidmatan Mobile Coaching on-site kami atau lihat panduan video digital kami.",
+                "cta-btn-coaching": "Mobile Coaching",
+                "cta-btn-catalog": "Katalog Digital",
+                "footer-text": "© 2026 IrfanAl Productions. Hak Cipta Terpelihara."
+            }
+        };
+
+        function switchLanguage(lang) {
+            localStorage.setItem('preferred_language', lang);
+            document.getElementById('lang-en').classList.toggle('active', lang === 'en');
+            document.getElementById('lang-bm').classList.toggle('active', lang === 'bm');
+
+            document.querySelectorAll('[data-i18n]').forEach(element => {
+                const key = element.getAttribute('data-i18n');
+                if (translations[lang] && translations[lang][key]) {
+                    element.textContent = translations[lang][key];
+                }
+            });
+        }
+
+        // Mobile Menu Toggle
+        const menuToggle = document.getElementById('mobile-menu');
+        const navLinks = document.querySelector('.nav-links');
+        if (menuToggle && navLinks) {
+            menuToggle.addEventListener('click', () => {
+                const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+                menuToggle.setAttribute('aria-expanded', !isExpanded);
+                navLinks.classList.toggle('active');
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const savedLang = localStorage.getItem('preferred_language') || 'en';
+            switchLanguage(savedLang);
+        });
+    </script>
+</body>
+</html>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Amir Amira | Equestrian Trail Management</title>
+    <title>Amir Amira | Equestrian Trail & Endurance Management</title>
     <link rel="icon" type="image/png" href="logo1.png">
     <link rel="stylesheet" href="style.css">
 
@@ -13,241 +13,483 @@
 </head>
 <body>
 
-    <!-- Navigation -->
+    <!-- Header Navigation -->
     <header class="navbar">
-        <div class="logo">
-            <img src="logo1.png" alt="Amir Amira Endurance Management">
-            <span>Amir Amira Endurance Management</span>
-        </div>
-        
-        <!-- Mobile Menu Hamburger Icon -->
-        <div class="menu-toggle" id="mobile-menu">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </div>
+        <a href="index.html" class="logo">
+            <img src="logo1.png" alt="Amir Amira Endurance Management Logo">
+            <span data-i18n="nav-title">Amir Amira Endurance Management</span>
+        </a>
 
-        <nav>
+        <button id="mobile-menu" class="menu-toggle" aria-label="Toggle Navigation" aria-expanded="false">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+
+        <nav id="primary-nav">
             <ul class="nav-links">
-                <li><a href="#about">The Sport</a></li>
-                <li><a href="#founders">Founders</a></li>
-                <li><a href="#services">Our Programs</a></li>
-                <li><a href="#faq">FAQ</a></li>
-                <li><a href="#contact">Join Us</a></li>
+                <li><a href="about.html" data-i18n="nav-about">Tentang Kami</a></li>
+                <li><a href="#coaching" data-i18n="nav-coaching">Mobile Coaching</a></li>
+                <li><a href="#services" data-i18n="nav-programs">Program Kami</a></li>
+                <li><a href="catalog.html" data-i18n="nav-store">Katalog Digital</a></li>
+                <li><a href="#faq" data-i18n="nav-faq">Soalan Lazim</a></li>
+                <li><a href="#contact" data-i18n="nav-join">Hubungi Kami</a></li>
             </ul>
         </nav>
+
+        <div class="lang-switcher" role="group" aria-label="Language Switcher">
+            <button id="lang-en" class="lang-btn" onclick="switchLanguage('en')">EN</button>
+            <span class="lang-divider">|</span>
+            <button id="lang-bm" class="lang-btn active" onclick="switchLanguage('bm')">BM</button>
+        </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero hidden">
-        <div class="hero-content">
-            <h1>Master the Long Distance</h1>
-            <p>Training, strategy, and conditioning built for the ultimate partnership between horse and rider.</p>
-            <a href="#contact" class="btn">Explore Programs</a>
-        </div>
-    </section>
+    <main>
+        <!-- Hero Section -->
+        <section class="hero hidden">
+            <div class="hero-content">
+                <h1 data-i18n="hero-title">Master the Long Distance</h1>
+                <p data-i18n="hero-desc">Training, strategy, and conditioning built for the ultimate partnership between horse and rider.</p>
+                <a href="#contact" class="btn" data-i18n="hero-btn">Explore Programs</a>
+            </div>
+        </section>
 
-    <!-- About Section -->
-    <section id="about" class="about-section">
-        <div class="container">
-            <h2>The Spirit of Endurance</h2>
-            <p>Endurance riding isn't just a race, it is a true test of horsemanship. Spanning distances from 50 to 160 kilometers, it requires pacing, vet-gate strategy, and a profound understanding of your horse's physiological limits.</p>
-        </div>
-    </section>
+        <!-- About Section -->
+        <section id="about" class="about-section">
+            <div class="container">
+                <h2 data-i18n="about-title">The Spirit of Endurance</h2>
+                <p data-i18n="about-desc">Endurance riding isn't just a race, it is a true test of horsemanship. Spanning distances from 50 to 160 kilometers, it requires pacing, vet-gate strategy, and a profound understanding of your horse's physiological limits.</p>
+            </div>
+        </section>
 
-    <!-- Meet the Founders Section -->
-    <section id="founders" class="coaches-section">
-        <div class="container hidden">
-            <h2>Meet The Founders</h2>
-            <p class="section-subtitle">Dedicated to elite endurance performance and equine welfare.</p>
-            
-            <div class="coaches-grid">
-                <div class="coach-card">
-                    <div class="coach-img-wrapper">
-                        <img src="profile1.jpeg" alt="profile1">
-                    </div>
-                    <h3>Mohammad Azhar Bin Abu Bakar (AMIR AMIRA)</h3>
-                    <span class="coach-role">Head Endurance Strategist</span>
-                    <p>Specializing in metabolic pacing, terrain management, and race-day tactics across international distances.</p>
+                <!-- Mobile Coaching & Pain Points Section -->
+        <section id="coaching" class="coaching-section">
+            <div class="container hidden">
+                
+                <!-- 1. Coaching Hero Card -->
+                <div class="coaching-hero-card">
+                    <h2 data-i18n="coaching-hero-title">Bawa Kuda Endurance Anda Naik Podium Tanpa Risiko Cedera & Vetted Out!</h2>
+                    <p data-i18n="coaching-hero-sub">Panduan praktikal berasaskan sains sukan & teknik conditioning sebenar untuk membina stamina atlet kuda anda, melancarkan kadar Heart Rate Recovery, dan menguasai Vet Gate di hari pertandingan.</p>
                 </div>
-                <div class="coach-card">
-                    <div class="coach-img-wrapper">
-                        <img src="profile2.jpg" alt="profile2">
+
+                <!-- 2. Pain Points Box -->
+                <div class="pain-box">
+                    <h3 data-i18n="pain-title">Adakah Anda Mengalami Masalah Ini Dalam Latihan Kuda Endurance?</h3>
+                    <ul class="pain-list">
+                        <li><span class="pain-icon" aria-hidden="true">❌</span> <span data-i18n="pain-1">Selalu Gagal Di Vet Gate?</span></li>
+                        <li><span class="pain-icon" aria-hidden="true">❌</span> <span data-i18n="pain-2">Risiko Cedera & Otot Kejang (Cramping)?</span></li>
+                        <li><span class="pain-icon" aria-hidden="true">❌</span> <span data-i18n="pain-3">Latihan "Main Agak-Agak"?</span></li>
+                        <li><span class="pain-icon" aria-hidden="true">❌</span> <span data-i18n="pain-4">Isu Jurulatih Tidak Konsisten (Ghosting)</span></li>
+                        <li><span class="pain-icon" aria-hidden="true">❌</span> <span data-i18n="pain-5">Kuda tidak qualified</span></li>
+                    </ul>
+                    <blockquote class="pain-quote">
+                        <p data-i18n="pain-quote">"Mengendalikan kuda endurance bukan sekadar aktiviti tunggangan biasa—ia adalah pengurusan seorang ATLET ELIT. Tersalah teknik latihan bukan sahaja meragut kemenangan, malah berisiko merosakkan aset berharga anda!"</p>
+                    </blockquote>
+                </div>
+
+                <!-- 3. Mobile Service Card -->
+                <div class="mobile-service-card">
+                    <span class="mobile-badge" data-i18n="mobile-badge">Memperkenalkan</span>
+                    <h2 data-i18n="mobile-title">🐎 Servis Latihan & Pengkondisian Kuda Endurance On-Site (Mobile Coaching)</h2>
+                    <p class="mobile-lead" data-i18n="mobile-lead">Tak perlu pusing kepala nak pindahkan kuda ke tempat lain. Kami bawa kepakaran, sains sukan, dan sistem latihan profesional terus ke kandang (stable) anda!</p>
+                    <p class="mobile-desc" data-i18n="mobile-desc">Kami menyediakan servis Mobile Endurance Coaching secara terus di lokasi anda. Anda tidak perlu risau tentang logistik pemindahan kuda, tekanan persekitaran baharu pada kuda, atau perubahan fasiliti. Pakar kami akan datang dan menguruskan program pengkondisian atlet anda mengikut jadual yang ditetapkan.</p>
+
+                    <h3 class="what-we-do-title" data-i18n="what-title">Apa Yang Kami Bawa & Lakukan Di Stable Anda?</h3>
+                    
+                    <div class="mobile-features-grid">
+                        <div class="feature-item">
+                            <div class="feature-num">01</div>
+                            <h4 data-i18n="feat1-title">Assessment & Audit Fizikal</h4>
+                            <p data-i18n="feat1-desc">Pemeriksaan fizikal menyeluruh, struktur otot, sendi, dan penanda aras kecergasan (baseline fitness) awal kuda anda di lokasi.</p>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-num">02</div>
+                            <h4 data-i18n="feat2-title">Program Conditioning Khusus</h4>
+                            <p data-i18n="feat2-desc">Merangka jadual latihan trot, canter, dan hill work mengikut trek/persekitaran sedia ada di kawasan kandang anda.</p>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-num">03</div>
+                            <h4 data-i18n="feat3-title">Pemantauan Nadi & Sains Sukan</h4>
+                            <p data-i18n="feat3-desc">Ujian & analisa kadar penurunan nadi (Heart Rate Recovery), bina penanda aras (baseline) kecergasan kuda anda supaya ia mampu melepasi pemeriksaan Vet Gate dengan pantas di hari pertandingan.</p>
+                        </div>
                     </div>
-                    <h3>Muhammad Syariff Bin Mohammad Azhar</h3>
-                    <span class="coach-role">Assistant Endurance Management & Marketing</span>
-                    <p>Focused on heart-rate recovery optimization, rider biomechanics, and personalized fitness regimens.</p>
+                    
+                    <div class="banner-cta-container">
+                        <a href="premium-package.html" class="btn-premium-banner" data-i18n="btn-pkg-banner">
+                            🐎 PAKEJ PREMIUM ON-SITE CONDITIONING
+                        </a>
+                        <p class="cta-subtitle" data-i18n="btn-pkg-sub">
+                            Klik untuk lihat butiran penuh, modul latihan & promosi Selangor.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Core Pillars / Services Section -->
+        <section id="services" class="services-section">
+            <div class="container hidden">
+                <h2 data-i18n="services-title">Our Core Pillars</h2>
+                
+                <!-- 3 Pillars Grid -->
+                <div class="grid">
+                    <div class="card prep-card hidden" tabindex="0" onclick="openModal('prep-modal')" onkeydown="if(event.key==='Enter') openModal('prep-modal')">
+                        <h3 data-i18n="prep-title">Physiological Prep</h3>
+                        <p data-i18n="prep-desc">Tailored heart-rate recovery programs and metabolic tracking to ensure your equine partner is in peak condition.</p>
+                        <span class="card-hint" data-i18n="card-hint">Click for details →</span>
+                    </div>
+                    
+                    <div class="card pacing-card hidden" tabindex="0" onclick="openModal('pacing-modal')" onkeydown="if(event.key==='Enter') openModal('pacing-modal')">
+                        <h3 data-i18n="pacing-title">Pacing & Strategy</h3>
+                        <p data-i18n="pacing-desc">Learn to map out terrain, plan vet-gate hold times, and execute optimal speed profiles for variable elevation changes.</p>
+                        <span class="card-hint" data-i18n="card-hint">Click for details →</span>
+                    </div>
+                    
+                    <div class="card rider-card hidden" tabindex="0" onclick="openModal('rider-modal')" onkeydown="if(event.key==='Enter') openModal('rider-modal')">
+                        <h3 data-i18n="rider-title">Rider Conditioning</h3>
+                        <p data-i18n="rider-desc">Core stability, posture refinement, and mental resilience training specifically structured for long hours in the saddle.</p>
+                        <span class="card-hint" data-i18n="card-hint">Click for details →</span>
+                    </div>
+                </div>
+
+                <!-- Full-Width Digital Catalog Banner -->
+                <div class="catalog-banner hidden">
+                    <div class="catalog-banner-content">
+                        <span class="banner-badge" data-i18n="vault-badge">DIGITAL VAULT</span>
+                        <h3 data-i18n="vault-title">Video Tutorial Pass</h3>
+                        <p data-i18n="vault-desc">Get instant access to our private Telegram vault featuring video guides on pacing, conditioning, and vet-gate strategy.</p>
+                    </div>
+                    <div class="catalog-banner-action">
+                        <a href="catalog.html" class="btn btn-buy" style="text-align:center; text-decoration:none;" data-i18n="vault-cta">Explore Digital Catalog →</a>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Services Grid (Our Core Pillars) -->
-    <section id="services" class="services-section">
-        <div class="container hidden">
-            <h2>Our Core Pillars</h2>
-            <div class="grid">
-                <div class="card prep-card hidden" onclick="openModal('prep-modal')">
-                    <h3>Physiological Prep</h3>
-                    <p>Tailored heart-rate recovery programs and metabolic tracking to ensure your equine partner is in peak condition.</p>
-                    <span class="card-hint">Click for details →</span>
-                </div>
-                <div class="card pacing-card hidden" onclick="openModal('pacing-modal')">
-                    <h3>Pacing & Strategy</h3>
-                    <p>Learn to map out terrain, plan vet-gate hold times, and execute optimal speed profiles for variable elevation changes.</p>
-                    <span class="card-hint">Click for details →</span>
-                </div>
-                <div class="card rider-card hidden" onclick="openModal('rider-modal')">
-                    <h3>Rider Conditioning</h3>
-                    <p>Core stability, posture refinement, and mental resilience training specifically structured for long hours in the saddle.</p>
-                    <span class="card-hint">Click for details →</span>
-                </div>
-                <div class="card prep-card hidden" style="border: 2px solid var(--accent-color);">
-                    <h3>Video Tutorial Pass</h3>
-                    <p>Get instant access to our private Telegram vault featuring video guides on pacing, conditioning, and vet-gate strategy.</p>
-                    <button id="buy-btn" onclick="buyVideoPlan()" class="btn" style="margin-top: 15px;">Buy with FPX / Card (RM 150)</button>
-                </div>
+        <!-- Accessible Modal Popup Dialog -->
+        <div id="modal-overlay" class="modal-overlay" role="dialog" aria-modal="true" aria-hidden="true" onclick="closeModal()">
+            <div class="modal-content" onclick="event.stopPropagation()">
+                <button class="modal-close" onclick="closeModal()" aria-label="Close dialog">&times;</button>
+                <div id="modal-body"></div>
             </div>
         </div>
-    </section>
 
-    <!-- Modal Popup Container -->
-    <div id="modal-overlay" class="modal-overlay" onclick="closeModal()">
-        <div class="modal-content" onclick="event.stopPropagation()">
-            <button class="modal-close" onclick="closeModal()">&times;</button>
-            <div id="modal-body"></div>
-        </div>
-    </div>
-
-    <!-- FAQ Section -->
-    <section id="faq" class="faq-section">
-        <div class="container hidden">
-            <h2>Frequently Asked Questions</h2>
-            <div class="faq-accordion">
-                <div class="faq-item">
-                    <button class="faq-question">What fitness level is required for horse and rider? <span class="faq-icon">+</span></button>
-                    <div class="faq-answer">
-                        <p>We work with riders from novice distances (20km–40km) up to elite international endurance rides (120km+). Programs are customized to your current baseline.</p>
+        <!-- FAQ Section -->
+        <section id="faq" class="faq-section">
+            <div class="container hidden">
+                <h2 data-i18n="faq-title">Frequently Asked Questions</h2>
+                <div class="faq-accordion">
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            <span data-i18n="faq1-q">What fitness level is required for horse and rider?</span> 
+                            <span class="faq-icon" aria-hidden="true">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p data-i18n="faq1-a">We work with riders from novice distances (20km–40km) up to elite international endurance rides (120km+). Programs are customized to your current baseline.</p>
+                        </div>
                     </div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question">How are coaching sessions structured? <span class="faq-icon">+</span></button>
-                    <div class="faq-answer">
-                        <p>Sessions include tailored interval workouts for your horse, and strategy briefs prior to competition days.</p>
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            <span data-i18n="faq2-q">How are coaching sessions structured?</span> 
+                            <span class="faq-icon" aria-hidden="true">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p data-i18n="faq2-a">Sessions include tailored interval workouts for your horse, and strategy briefs prior to competition days.</p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Contact Form Section -->
-    <section id="contact" class="contact-section">
-        <div class="container form-container">
-            <h2>Ready to Begin the Journey?</h2>
-            <p>Leave your details below to schedule a consultation with our endurance coaching staff.</p>
-            
-            <form class="contact-form" action="https://formspree.io/f/xwvglgbk" method="POST">
-                <input type="text" name="name" placeholder="Your Name" required>
-                <input type="email" name="email" placeholder="Your Email" required>
-                <textarea name="message" placeholder="Tell us about your horse and experience level..." rows="5" required></textarea>
-                <button type="submit" class="btn">Submit Inquiry</button>
-            </form>
-        </div>
-    </section>
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <div class="container form-container">
+                <h2 data-i18n="contact-title">Ready to Begin the Journey?</h2>
+                <p data-i18n="contact-desc">Leave your details below to schedule a consultation with our endurance coaching staff.</p>
+                
+                <form class="contact-form" action="https://formspree.io/f/xwvglgbk" method="POST">
+                    <input type="text" name="name" placeholder="Your Name" data-i18n-placeholder="form-name" required>
+                    <input type="email" name="email" placeholder="Your Email" data-i18n-placeholder="form-email" required>
+                    <textarea name="message" placeholder="Tell us about your horse and experience level..." data-i18n-placeholder="form-message" rows="5" required></textarea>
+                    <button type="submit" class="btn" data-i18n="submit-btn">Submit Inquiry</button>
+                </form>
+            </div>
+        </section>
+    </main>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2026 IrfanAl Productions. All Rights Reserved.</p>
+        <p data-i18n="footer-text">&copy; 2026 IrfanAl Productions. All Rights Reserved.</p>
     </footer>
 
     <!-- Floating WhatsApp Quick-Chat Button -->
-    <a href="https://wa.me/601170332316?text=Hi!%20I%20would%20like%20to%20inquire%20about%20endurance%20coaching." class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
-        <svg viewBox="0 0 32 32" width="28" height="28" fill="#ffffff">
+    <a href="https://wa.me/601170332316?text=Hi!%20I%20would%20like%20to%20inquire%20about%20endurance%20coaching." class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat with us on WhatsApp">
+        <svg viewBox="0 0 32 32" width="28" height="28" fill="#ffffff" aria-hidden="true">
             <path d="M16 2a13.9 13.9 0 0 0-11.8 21.3L2 30l6.9-2.2A13.9 13.9 0 1 0 16 2zm7.9 19.6c-.3.9-1.8 1.7-2.5 1.8-.7.1-1.6.2-5.1-1.2-4.4-1.8-7.3-6.2-7.5-6.5-.2-.3-1.8-2.4-1.8-4.6s1.1-3.3 1.5-3.7c.4-.4.9-.5 1.2-.5h.9c.3 0 .6 0 .9.7.3.7 1.1 2.7 1.2 2.9.1.2.1.4 0 .6-.1.2-.2.4-.4.6-.2.2-.4.4-.2.8.5.9 1.8 2.4 3.3 3.3.4.2.8.2 1-.1.2-.3.9-1.1 1.2-1.4.3-.3.6-.3.9-.2.3.1 2.1 1 2.5 1.2.4.2.7.3.8.5.1.2.1 1.1-.2 2z"/>
         </svg>
     </a>
 
-    <!-- JavaScript Interactions -->
+    <!-- JavaScript Logic -->
     <script>
-        // 1. Scroll Animation Observer
+        // --- TRANSLATION DICTIONARY ---
+        const translations = {
+            en: {
+                "nav-title": "Amir Amira Endurance Management",
+                "nav-about": "About Us",
+                "nav-sport": "The Sport",
+                "nav-coaching": "Mobile Coaching",
+                "nav-founders": "Founders",
+                "nav-programs": "Our Programs",
+                "nav-store": "Digital Catalog",
+                "nav-faq": "FAQ",
+                "nav-join": "Join Us",
+                "hero-title": "Master the Long Distance",
+                "hero-desc": "Training, strategy, and conditioning built for the ultimate partnership between horse and rider.",
+                "hero-btn": "Explore Programs",
+                "about-title": "The Spirit of Endurance",
+                "about-desc": "Endurance riding isn't just a race, it is a true test of horsemanship. Spanning distances from 50 to 160 kilometers, it requires pacing, vet-gate strategy, and a profound understanding of your horse's physiological limits.",
+                "coaching-hero-title": "Take Your Endurance Horse to the Podium Without Risk of Injury & Being Vetted Out!",
+                "coaching-hero-sub": "Practical sports science-based guidance & proven conditioning techniques to build your equine athlete's stamina, optimize Heart Rate Recovery, and master the Vet Gate on competition day.",
+                "pain-title": "Are You Experiencing These Problems In Endurance Horse Training?",
+                "pain-1": "Constantly Failing at the Vet Gate?",
+                "pain-2": "Risk of Injury & Muscle Cramping?",
+                "pain-3": "\"Guesswork-Based\" Training?",
+                "pain-4": "Inconsistent Coaching (Ghosting)?",
+                "pain-5": "Horse Unable to Qualify?",
+                "pain-quote": "\"Handling an endurance horse isn't just regular riding—it's managing an ELITE ATHLETE. Wrong training techniques won't just cost you the victory, but risk damaging your valuable asset!\"",
+                "mobile-badge": "Introducing",
+                "mobile-title": "🐎 On-Site Endurance Horse Training & Conditioning Service (Mobile Coaching)",
+                "mobile-lead": "No need to worry about relocating your horse. We bring expertise, sports science, and professional training systems straight to your stable!",
+                "mobile-desc": "We provide Mobile Endurance Coaching directly at your location. Forget the stress of horse transport logistics, new environment pressures, or facility changes. Our specialists come to you and manage your athlete's conditioning program on a fixed schedule.",
+                "what-title": "What Do We Bring & Perform At Your Stable?",
+                "feat1-title": "Physical Assessment & Audit",
+                "feat1-desc": "Comprehensive physical check, muscle structure, joints, and initial baseline fitness assessment of your horse on-site.",
+                "feat2-title": "Customized Conditioning Program",
+                "feat2-desc": "Designing custom trot, canter, and hill work training schedules suited to your stable's existing environment and trails.",
+                "feat3-title": "Heart Rate Monitoring & Sports Science",
+                "feat3-desc": "Heart Rate Recovery analysis & testing to build your horse's fitness baseline so it passes Vet Gate inspections swiftly on race day.",
+                "founders-title": "Meet The Founders",
+                "founders-sub": "Dedicated to elite endurance performance and equine welfare.",
+                "coach1-role": "Head Endurance Strategist",
+                "coach1-desc": "Specializing in metabolic pacing, terrain management, and race-day tactics across international distances.",
+                "coach2-role": "Assistant Endurance Management & Marketing",
+                "coach2-desc": "Focused on heart-rate recovery optimization, rider biomechanics, and personalized fitness regimens.",
+                "services-title": "Our Core Pillars",
+                "prep-title": "Physiological Prep",
+                "prep-desc": "Tailored heart-rate recovery programs and metabolic tracking to ensure your equine partner is in peak condition.",
+                "card-hint": "Click for details →",
+                "pacing-title": "Pacing & Strategy",
+                "pacing-desc": "Learn to map out terrain, plan vet-gate hold times, and execute optimal speed profiles for variable elevation changes.",
+                "rider-title": "Rider Conditioning",
+                "rider-desc": "Core stability, posture refinement, and mental resilience training specifically structured for long hours in the saddle.",
+                "vault-badge": "DIGITAL VAULT",
+                "vault-title": "Video Tutorial Pass",
+                "vault-desc": "Get instant access to our private Telegram vault featuring video guides on pacing, conditioning, and vet-gate strategy.",
+                "vault-cta": "Explore Digital Catalog →",
+                "faq-title": "Frequently Asked Questions",
+                "faq1-q": "What fitness level is required for horse and rider?",
+                "faq1-a": "We work with riders from novice distances (20km–40km) up to elite international endurance rides (120km+). Programs are customized to your current baseline.",
+                "faq2-q": "How are coaching sessions structured?",
+                "faq2-a": "Sessions include tailored interval workouts for your horse, and strategy briefs prior to competition days.",
+                "contact-title": "Ready to Begin the Journey?",
+                "contact-desc": "Leave your details below to schedule a consultation with our endurance coaching staff.",
+                "form-name": "Your Name",
+                "form-email": "Your Email",
+                "form-message": "Tell us about your horse and experience level...",
+                "submit-btn": "Submit Inquiry",
+                "footer-text": "© 2026 IrfanAl Productions. All Rights Reserved.",
+                "btn-pkg-banner": "🐎 PREMIUM ON-SITE CONDITIONING PACKAGE",
+                "btn-pkg-sub": "Click to view full details, training modules & Selangor promo."
+            },
+            bm: {
+                "nav-title": "Pengurusan Endurance Amir Amira",
+                "nav-about": "Tentang Kami",
+                "nav-sport": "Sukan Ini",
+                "nav-coaching": "Mobile Coaching",
+                "nav-founders": "Pengasas",
+                "nav-programs": "Program Kami",
+                "nav-store": "Katalog Digital",
+                "nav-faq": "Soalan Lazim",
+                "nav-join": "Sertai Kami",
+                "hero-title": "Kuasai Jarak Jauh",
+                "hero-desc": "Latihan, strategi, dan pengkondisian yang dibina untuk gandingan terbaik antara kuda dan penunggang.",
+                "hero-btn": "Terokai Program",
+                "about-title": "Semangat Endurance",
+                "about-desc": "Larian endurance bukan sekadar perlumbaan, ia adalah ujian sebenar kemahiran penunggang kuda. Merangkumi jarak dari 50 hingga 160 kilometer, ia memerlukan perancangan kelajuan, strategi vet-gate, dan kefahaman mendalam tentang had fisiologi kuda anda.",
+                "coaching-hero-title": "Bawa Kuda Endurance Anda Naik Podium Tanpa Risiko Cedera & Vetted Out!",
+                "coaching-hero-sub": "Panduan praktikal berasaskan sains sukan & teknik conditioning sebenar untuk membina stamina atlet kuda anda, melancarkan kadar Heart Rate Recovery, dan menguasai Vet Gate di hari pertandingan.",
+                "pain-title": "Adakah Anda Mengalami Masalah Ini Dalam Latihan Kuda Endurance?",
+                "pain-1": "Selalu Gagal Di Vet Gate?",
+                "pain-2": "Risiko Cedera & Otot Kejang (Cramping)?",
+                "pain-3": "Latihan \"Main Agak-Agak\"?",
+                "pain-4": "Isu Jurulatih Tidak Konsisten (Ghosting)",
+                "pain-5": "Kuda tidak qualified",
+                "pain-quote": "\"Mengendalikan kuda endurance bukan sekadar aktiviti tunggangan biasa—ia adalah pengurusan seorang ATLET ELIT. Tersalah teknik latihan bukan sahaja meragut kemenangan, malah berisiko merosakkan aset berharga anda!\"",
+                "mobile-badge": "Memperkenalkan",
+                "mobile-title": "🐎 Servis Latihan & Pengkondisian Kuda Endurance On-Site (Mobile Coaching)",
+                "mobile-lead": "Tak perlu pusing kepala nak pindahkan kuda ke tempat lain. Kami bawa kepakaran, sains sukan, dan sistem latihan profesional terus ke kandang (stable) anda!",
+                "mobile-desc": "Kami menyediakan servis Mobile Endurance Coaching secara terus di lokasi anda. Anda tidak perlu risau tentang logistik pemindahan kuda, tekanan persekitaran baharu pada kuda, atau perubahan fasiliti. Pakar kami akan datang dan menguruskan program pengkondisian atlet anda mengikut jadual yang ditetapkan.",
+                "what-title": "Apa Yang Kami Bawa & Lakukan Di Stable Anda?",
+                "feat1-title": "Assessment & Audit Fizikal",
+                "feat1-desc": "Pemeriksaan fizikal menyeluruh, struktur otot, sendi, dan penanda aras kecergasan (baseline fitness) awal kuda anda di lokasi.",
+                "feat2-title": "Program Conditioning Khusus",
+                "feat2-desc": "Merangka jadual latihan trot, canter, dan hill work mengikut trek/persekitaran sedia ada di kawasan kandang anda.",
+                "feat3-title": "Pemantauan Nadi & Sains Sukan",
+                "feat3-desc": "Ujian & analisa kadar penurunan nadi (Heart Rate Recovery), bina penanda aras (baseline) kecergasan kuda anda supaya ia mampu melepasi pemeriksaan Vet Gate dengan pantas di hari pertandingan.",
+                "founders-title": "Kenali Pengasas Kami",
+                "founders-sub": "Berdedikasi untuk prestasi endurance elit dan kebajikan ekuin.",
+                "coach1-role": "Ketua Strategi Endurance",
+                "coach1-desc": "Pakar dalam kawalan kelajuan metabolik, pengurusan rupa bumi, dan taktik hari perlumbaan di seluruh jarak antarabangsa.",
+                "coach2-role": "Penolong Pengurusan Endurance & Pemasaran",
+                "coach2-desc": "Fokus pada pengoptimuman pemulihan kadar jantung, biomekanik penunggang, dan rejimen kecergasan peribadi.",
+                "services-title": "Teras Utama Kami",
+                "prep-title": "Persediaan Fisiologi",
+                "prep-desc": "Program pemulihan kadar jantung yang disesuaikan dan penjejakan metabolik untuk memastikan kuda anda dalam keadaan puncak.",
+                "card-hint": "Klik untuk butiran →",
+                "pacing-title": "Kelajuan & Strategi",
+                "pacing-desc": "Belajar memeta rupa bumi, merancang masa tahanan vet-gate, dan melaksanakan profil kelajuan optimum untuk perubahan ketinggian.",
+                "rider-title": "Pengkondisian Penunggang",
+                "rider-desc": "Kestabilan teras, pembaikan postur, dan latihan ketahanan mental yang direka khas untuk tempoh yang lama di pelana.",
+                "vault-badge": "E-KATALOG DIGITAL",
+                "vault-title": "Pas Tutorial Video",
+                "vault-desc": "Dapatkan akses segera ke vault Telegram peribadi kami yang memaparkan panduan video tentang kelajuan, pengkondisian, dan strategi vet-gate.",
+                "vault-cta": "Lihat Katalog Digital →",
+                "faq-title": "Soalan Lazim",
+                "faq1-q": "Apakah tahap kecergasan yang diperlukan untuk kuda dan penunggang?",
+                "faq1-a": "Kami melatih penunggang dari jarak novis (20km–40km) sehingga tunggangan endurance antarabangsa elit (120km+). Program disesuaikan mengikut tahap asas semasa anda.",
+                "faq2-q": "Bagaimanakah struktur sesi latihan?",
+                "faq2-a": "Sesi merangkumi latihan interval khas untuk kuda anda, dan taklimat strategi sebelum hari pertandingan.",
+                "contact-title": "Sedia Memulakan Perjalanan?",
+                "contact-desc": "Tinggalkan butiran anda di bawah untuk menetapkan jadual rundingan bersama barisan jurulatih endurance kami.",
+                "form-name": "Nama Anda",
+                "form-email": "E-mel Anda",
+                "form-message": "Beritahu kami tentang kuda dan tahap pengalaman anda...",
+                "submit-btn": "Hantar Pertanyaan",
+                "footer-text": "© 2026 IrfanAl Productions. Hak Cipta Terpelihara.",
+                "btn-pkg-banner": "🐎 PAKEJ PREMIUM ON-SITE CONDITIONING",
+                "btn-pkg-sub": "Klik untuk lihat butiran penuh, modul latihan & promosi Selangor."
+            }
+        };
+
+        // --- LANGUAGE SWITCHING ---
+        function switchLanguage(lang) {
+            localStorage.setItem('preferred_language', lang);
+
+            const btnEn = document.getElementById('lang-en');
+            const btnBm = document.getElementById('lang-bm');
+            if (btnEn && btnBm) {
+                btnEn.classList.toggle('active', lang === 'en');
+                btnBm.classList.toggle('active', lang === 'bm');
+            }
+
+            document.querySelectorAll('[data-i18n]').forEach(element => {
+                const key = element.getAttribute('data-i18n');
+                if (translations[lang] && translations[lang][key]) {
+                    element.textContent = translations[lang][key];
+                }
+            });
+
+            document.querySelectorAll('[data-i18n-placeholder]').forEach(element => {
+                const key = element.getAttribute('data-i18n-placeholder');
+                if (translations[lang] && translations[lang][key]) {
+                    element.placeholder = translations[lang][key];
+                }
+            });
+        }
+
+        // --- INTERSECTION OBSERVER ---
         const observer = new IntersectionObserver((entries) => {
             entries.forEach((entry) => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('show');
-                } else {
-                    entry.target.classList.remove('show');
                 }
             });
-        });
+        }, { threshold: 0.1 });
 
-        const hiddenElements = document.querySelectorAll('.hidden');
-        hiddenElements.forEach((el) => observer.observe(el));
+        document.querySelectorAll('.hidden').forEach((el) => observer.observe(el));
 
-        // 2. Mobile Menu Toggle
+        // --- MOBILE MENU ACCESSIBILITY & TOGGLE ---
         const menuToggle = document.getElementById('mobile-menu');
         const navLinks = document.querySelector('.nav-links');
 
-        menuToggle.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-        });
+        if (menuToggle && navLinks) {
+            menuToggle.addEventListener('click', () => {
+                const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+                menuToggle.setAttribute('aria-expanded', !isExpanded);
+                navLinks.classList.toggle('active');
+            });
 
-        // 3. Interactive Modals for Core Pillars
+            // Close mobile nav when clicking a link
+            document.querySelectorAll('.nav-links a').forEach(link => {
+                link.addEventListener('click', () => {
+                    navLinks.classList.remove('active');
+                    menuToggle.setAttribute('aria-expanded', 'false');
+                });
+            });
+        }
+
+        // --- ACCESSIBLE MODALS ---
         const modalData = {
-            'prep-modal': '<h2>Physiological Prep</h2><p style="margin-top:15px; color:#444;">Includes structured metabolic tracking, heart-rate recovery analysis, custom electrolyte regimens, and pre-race vet gate strategy to ensure peak equine health.</p>',
-            'pacing-modal': '<h2>Pacing & Strategy</h2><p style="margin-top:15px; color:#444;">Learn terrain mapping, elevation management, optimal speed profiles, and vet-hold time management for 40km–120km+ distances.</p>',
-            'rider-modal': '<h2>Rider Conditioning</h2><p style="margin-top:15px; color:#444;">Targeted core stability, posture refinement, mental resilience coaching, and saddle endurance designed for multi-hour rides.</p>'
+            en: {
+                'prep-modal': '<h2>Physiological Prep</h2><p style="margin-top:15px; color:#444;">Includes structured metabolic tracking, heart-rate recovery analysis, custom electrolyte regimens, and pre-race vet gate strategy to ensure peak equine health.</p>',
+                'pacing-modal': '<h2>Pacing & Strategy</h2><p style="margin-top:15px; color:#444;">Learn terrain mapping, elevation management, optimal speed profiles, and vet-hold time management for 40km–120km+ distances.</p>',
+                'rider-modal': '<h2>Rider Conditioning</h2><p style="margin-top:15px; color:#444;">Targeted core stability, posture refinement, mental resilience coaching, and saddle endurance designed for multi-hour rides.</p>'
+            },
+            bm: {
+                'prep-modal': '<h2>Persediaan Fisiologi</h2><p style="margin-top:15px; color:#444;">Termasuk penjejakan metabolik berstruktur, analisis pemulihan kadar jantung, rejim elektrolit tersuai, dan strategi vet gate pra-perlumbaan untuk kesihatan ekuin puncak.</p>',
+                'pacing-modal': '<h2>Kelajuan & Strategi</h2><p style="margin-top:15px; color:#444;">Belajar memeta rupa bumi, pengurusan ketinggian, profil kelajuan optimum, dan pengurusan masa penangguhan vet untuk jarak 40km–120km+.</p>',
+                'rider-modal': '<h2>Pengkondisian Penunggang</h2><p style="margin-top:15px; color:#444;">Kestabilan teras yang disasarkan, pembaikan postur, bimbingan ketahanan mental, dan daya tahan pelana yang direka untuk tunggangan berbilang jam.</p>'
+            }
         };
 
         function openModal(modalKey) {
-            document.getElementById('modal-body').innerHTML = modalData[modalKey];
-            document.getElementById('modal-overlay').style.display = 'flex';
+            const currentLang = localStorage.getItem('preferred_language') || 'en';
+            const overlay = document.getElementById('modal-overlay');
+            document.getElementById('modal-body').innerHTML = modalData[currentLang][modalKey];
+            
+            overlay.style.display = 'flex';
+            overlay.setAttribute('aria-hidden', 'false');
+            document.body.style.overflow = 'hidden';
         }
 
         function closeModal() {
-            document.getElementById('modal-overlay').style.display = 'none';
+            const overlay = document.getElementById('modal-overlay');
+            overlay.style.display = 'none';
+            overlay.setAttribute('aria-hidden', 'true');
+            document.body.style.overflow = '';
         }
 
-        // 4. FAQ Accordion Toggle
+        // Close modal via Escape Key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeModal();
+        });
+
+        // --- FAQ ACCORDION ---
         document.querySelectorAll('.faq-question').forEach(button => {
             button.addEventListener('click', () => {
                 const answer = button.nextElementSibling;
-                const isOpen = answer.style.display === 'block';
-                
+                const isOpen = button.getAttribute('aria-expanded') === 'true';
+
+                document.querySelectorAll('.faq-question').forEach(btn => {
+                    btn.setAttribute('aria-expanded', 'false');
+                    btn.querySelector('.faq-icon').textContent = '+';
+                });
                 document.querySelectorAll('.faq-answer').forEach(a => a.style.display = 'none');
-                document.querySelectorAll('.faq-icon').forEach(i => i.textContent = '+');
-                
+
                 if (!isOpen) {
+                    button.setAttribute('aria-expanded', 'true');
                     answer.style.display = 'block';
                     button.querySelector('.faq-icon').textContent = '-';
                 }
             });
         });
-        async function buyVideoPlan() {
-            const btn = document.getElementById('buy-btn');
-            btn.disabled = true;
-            btn.innerText = "Redirecting to Bank...";
 
-            try {
-                const response = await fetch('/api/create-checkout', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' }
-                });
-                const data = await response.json();
-
-                if (data.url) {
-                    window.location.href = data.url; // Redirects user to Stripe FPX/Card page
-                } else {
-                    alert("Could not start checkout. Please try again.");
-                    btn.disabled = false;
-                    btn.innerText = "Buy with FPX / Card (RM 150)";
-                }
-            } catch (error) {
-                console.error("Payment error:", error);
-                alert("Connection error. Please try again.");
-                btn.disabled = false;
-                btn.innerText = "Buy with FPX / Card (RM 150)";
-            }
-        }
+        // --- INITIALIZATION ---
+        document.addEventListener('DOMContentLoaded', () => {
+            const savedLang = localStorage.getItem('preferred_language') || 'en';
+            switchLanguage(savedLang);
+        });
     </script>
 </body>
 </html>

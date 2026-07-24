@@ -22,12 +22,12 @@
 
         .success-card {
             background: #ffffff;
-            border-radius: 20px;
+            border-radius: var(--radius-md);
             padding: 50px 40px;
             max-width: 600px;
             width: 100%;
             text-align: center;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
             border: 2px solid var(--accent-color);
         }
 
@@ -61,7 +61,7 @@
             background-color: #f7f9f8;
             border-left: 4px solid var(--accent-color);
             padding: 20px;
-            border-radius: 8px;
+            border-radius: var(--radius-sm);
             text-align: left;
             margin-bottom: 30px;
         }
@@ -84,18 +84,18 @@
 </head>
 <body>
 
-    <!-- Header / Navbar -->
+    <!-- Navigation Header -->
     <header class="navbar">
         <div class="logo">
-            <img src="logo1.png" alt="Amir Amira Endurance Management">
+            <img src="logo1.png" alt="Amir Amira Endurance Management Logo">
             <span>Amir Amira Endurance Management</span>
         </div>
     </header>
 
-    <!-- Success Main Content -->
+    <!-- Main Content Wrapper -->
     <main class="success-wrapper">
         <div class="success-card">
-            <div class="success-icon">
+            <div class="success-icon" aria-hidden="true">
                 <svg width="45" height="45" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
                     <polyline points="20 6 9 17 4 12"></polyline>
                 </svg>
@@ -106,7 +106,7 @@
 
             <div class="info-box">
                 <h3>📧 Check Your Email Inbox</h3>
-                <p>We have dispatched an email to your address containing your unique, single-use Telegram private group invitation link.</p>
+                <p>We have dispatched an email containing your unique, single-use Telegram private group invitation link.</p>
                 <p style="margin-top: 8px; font-size: 0.85rem; color: #888;"><em>If you don't see it within 2 minutes, please check your Spam / Junk folder.</em></p>
             </div>
 

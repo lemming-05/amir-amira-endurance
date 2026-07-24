@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pakej Premium On-Site Conditioning | Amir Amira Endurance Management</title>
+    <link rel="icon" type="image/png" href="logo1.png">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        .nav-group {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            margin-left: auto;
+        }
+
+        .pkg-hero {
+            background: linear-gradient(rgba(28, 53, 45, 0.92), rgba(28, 53, 45, 0.96)), url('prep.jpg') center/cover no-repeat;
+            padding: 90px 20px 60px;
+            text-align: center;
+            color: #ffffff;
+            border-bottom: 3px solid var(--accent-color, #d4af37);
+        }
+        .pkg-hero h1 {
+            font-family: var(--font-heading, 'Cinzel', serif);
+            color: var(--accent-color, #d4af37);
+            font-size: clamp(1.8rem, 4vw, 2.8rem);
+            margin-bottom: 15px;
+            line-height: 1.3;
+            letter-spacing: 0.5px;
+        }
+        .pkg-hero .subtitle {
+            font-size: clamp(1rem, 2vw, 1.15rem);
+            max-width: 750px;
+            margin: 0 auto 25px;
+            color: #e0e0e0;
+            font-style: italic;
+            line-height: 1.6;
+        }
+        .pkg-badge {
+            display: inline-block;
+            background: var(--accent-color, #d4af37);
+            color: #1c352d;
+            padding: 8px 22px;
+            border-radius: 30px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+        }
+
+        .pkg-container {
+            max-width: 900px;
+            margin: 40px auto 60px;
+            padding: 0 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .pkg-box {
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 40px 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+            border: 1px solid #eae2d0;
+        }
+
+        .pkg-box h2 {
+            font-family: var(--font-heading, 'Cinzel', serif);
+            color: #1c352d;
+            font-size: 1.5rem;
+            margin-bottom: 25px;
+            border-bottom: 2px solid #eae2d0;
+            padding-bottom: 12px;
+        }
+
+        .feature-list {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 25px;
+        }
+        .feature-list li {
+            font-size: 1.02rem;
+            color: #333333;
+            margin-bottom: 20px;
+            line-height: 1.6;
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+        }
+        .feature-list .icon {
+            font-size: 1.25rem;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .bonus-box {
+            background: #fdfbf7;
+            border: 2px dashed var(--accent-color, #d4af37);
+            border-radius: 10px;
+            padding: 25px;
+        }
+        .bonus-box h3 {
+            color: #1c352d;
+            font-size: 1.25rem;
+            margin-bottom: 15px;
+            font-family: var(--font-heading, 'Cinzel', serif);
+        }
+
+        .price-section {
+            text-align: center;
+            background: linear-gradient(135deg, #1c352d 0%, #12241e 100%);
+            color: #ffffff;
+            padding: 40px 25px;
+            border-radius: 12px;
+            border: 1px solid var(--accent-color, #d4af37);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+        .price-location {
+            font-size: 1.1rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--accent-color, #d4af37);
+            font-weight: 700;
+        }
+        .price-old {
+            font-size: 1.3rem;
+            text-decoration: line-through;
+            color: #a0a0a0;
+            margin-top: 8px;
+        }
+        .price-new {
+            font-size: clamp(2rem, 5vw, 3rem);
+            font-weight: 700;
+            color: #ffffff;
+            margin: 10px 0;
+        }
+        .price-new-highlight {
+            color: var(--accent-color, #d4af37);
+        }
+
+        .warning-box {
+            background: #fff8e7;
+            border-left: 5px solid #e67e22;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+        }
+        .warning-box h3 {
+            color: #d35400;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            font-family: var(--font-heading, 'Cinzel', serif);
+        }
+        .warning-box p {
+            color: #555555;
+            line-height: 1.65;
+            margin: 0;
+            font-size: 0.98rem;
+        }
+
+        .cta-section {
+            text-align: center;
+            background: #ffffff;
+            padding: 45px 25px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            border: 2px solid var(--accent-color, #d4af37);
+        }
+        .cta-section h3 {
+            color: #1c352d;
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            font-family: var(--font-heading, 'Cinzel', serif);
+        }
+        .cta-section p {
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 1.05rem;
+        }
+
+        @keyframes pulse-wa {
+            0% { transform: scale(1); box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4); }
+            50% { transform: scale(1.02); box-shadow: 0 12px 30px rgba(37, 211, 102, 0.6); }
+            100% { transform: scale(1); box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4); }
+        }
+
+        .btn-whatsapp-big {
+            display: inline-block;
+            width: 100%;
+            max-width: 650px;
+            background: #25d366;
+            color: #ffffff;
+            font-size: clamp(1rem, 2.5vw, 1.15rem);
+            font-weight: 700;
+            padding: 20px 25px;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            line-height: 1.4;
+            animation: pulse-wa 2.5s infinite;
+        }
+        .btn-whatsapp-big:hover {
+            background: #1eb954;
+            transform: translateY(-3px);
+            animation: none;
+            box-shadow: 0 15px 35px rgba(37, 211, 102, 0.6);
+        }
+        .cta-subtext {
+            display: block;
+            margin-top: 15px;
+            font-size: 0.9rem;
+            color: #777;
+        }
+
+        @media (max-width: 600px) {
+            .pkg-box {
+                padding: 30px 20px;
+            }
+            .pkg-container {
+                margin: 25px auto 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="navbar">
+        <div class="logo">
+            <a href="index.html" style="display: flex; align-items: center; text-decoration: none; color: inherit; gap: 12px;">
+                <img src="logo1.png" alt="Amir Amira Endurance Management Logo">
+                <span>Amir Amira Endurance Management</span>
+            </a>
+        </div>
+        
+        <!-- Mobile Toggle Button -->
+        <button class="menu-toggle" id="mobile-menu" aria-label="Toggle navigation">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+
+        <!-- Grouped Nav Link & Language Switcher (Side-by-Side) -->
+        <div class="nav-group">
+            <nav id="primary-nav">
+                <ul class="nav-links">
+                    <li><a href="index.html#coaching" data-i18n="nav-back">← Kembali ke Halaman Utama</a></li>
+                </ul>
+            </nav>
+
+            <div class="lang-switcher" role="group" aria-label="Language Switcher">
+                <button id="lang-en" class="lang-btn" onclick="switchLanguage('en')">EN</button>
+                <span class="lang-divider">|</span>
+                <button id="lang-bm" class="lang-btn active" onclick="switchLanguage('bm')">BM</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="pkg-hero">
+            <h1 data-i18n="pkg-title">🐎 PAKEJ PREMIUM ON-SITE CONDITIONING</h1>
+            <p class="subtitle" data-i18n="pkg-subtitle">"Semua kepakaran, pemantauan sains sukan, dan program latihan profesional dibawakan terus ke kandang anda."</p>
+            <span class="pkg-badge" data-i18n="pkg-badge">Pakej Premium untuk 1 Ekor Kuda Endurance</span>
+        </section>
+
+        <div class="pkg-container">
+            
+            <!-- What's Included -->
+            <div class="pkg-box">
+                <h2 data-i18n="pkg-included-title">📋 Apa Yang Merangkumi Dalam Pakej Ini?</h2>
+                <ul class="feature-list">
+                    <li>
+                        <span class="icon" aria-hidden="true">✅</span>
+                        <div>
+                            <strong data-i18n="pkg-f1-t">Sesi Latihan On-Site eksklusif (10 sesi):</strong><br>
+                            <span data-i18n="pkg-f1-d">Team kami turun terus ke kandang (stable) anda mengikut jadual khas untuk melatih kuda dan rider anda.</span>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="icon" aria-hidden="true">✅</span>
+                        <div>
+                            <strong data-i18n="pkg-f2-t">Audit Fizikal & Baseline Fitness:</strong><br>
+                            <span data-i18n="pkg-f2-d">Pemeriksaan struktur otot, sendi, dan tahap kecergasan awal kuda sebelum program bermula.</span>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="icon" aria-hidden="true">✅</span>
+                        <div>
+                            <strong data-i18n="pkg-f3-t">Pelan Conditioning Khusus:</strong><br>
+                            <span data-i18n="pkg-f3-d">Struktur latihan trot, canter, dan hill work yang disesuaikan dengan trek sedia ada di lokasi anda.</span>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="icon" aria-hidden="true">✅</span>
+                        <div>
+                            <strong data-i18n="pkg-f4-t">Pemantauan Nadi (Real-Time):</strong><br>
+                            <span data-i18n="pkg-f4-d">Menjejak kadar pemulihan jantung (Heart Rate Recovery) semasa latihan dengan betul.</span>
+                        </div>
+                    </li>
+                </ul>
+
+                <!-- Bonus -->
+                <div class="bonus-box">
+                    <h3 data-i18n="pkg-bonus-title">✨ BONUS EKSKLUSIF</h3>
+                    <ul class="feature-list" style="margin: 0;">
+                        <li style="margin: 0;">
+                            <span class="icon" aria-hidden="true">✅</span>
+                            <div>
+                                <strong data-i18n="pkg-bf-t">Formulasi Pemakanan & Suplemen:</strong><br>
+                                <span data-i18n="pkg-bf-d">Merangka pelan makanan dan suplemen yang teliti untuk kuda endurance anda.</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Pricing -->
+            <div class="price-section">
+                <div class="price-location" data-i18n="pkg-zone">ZON SELANGOR</div>
+                <div class="price-old" data-i18n="pkg-price-old">Harga Asal: RM 3,400</div>
+                <div class="price-new">
+                    <span class="price-new-highlight" data-i18n="pkg-price-new">Offer RM 2,590</span> 
+                    <span style="font-size: 1.1rem; font-weight: normal; color: #e0e0e0;" data-i18n="pkg-price-unit">/ bulan sahaja</span>
+                </div>
+            </div>
+
+            <!-- Scarcity Warning -->
+            <div class="warning-box">
+                <h3 data-i18n="pkg-warn-title">⚠️ SLOT SANGAT TERHAD!</h3>
+                <p data-i18n="pkg-warn-desc">Memandangkan kami mengekalkan kawalan kualiti yang tinggi dan memerlukan pergerakan fizikal ke lokasi kandang anda, slot perkhidmatan ini dihadkan untuk beberapa ekor kuda sahaja pada satu-satu masa mengikut zon kawasan (SELANGOR SAHAJA).</p>
+            </div>
+
+            <!-- CTA Section -->
+            <div class="cta-section">
+                <h3 data-i18n="pkg-cta-title">🟢 MULAKAN PROGRAM CONDITIONING HARI INI</h3>
+                <p data-i18n="pkg-cta-desc">Jangan biarkan kesilapan kecil dalam program latihan menjejaskan potensi kuda anda.</p>
+                
+                <a id="whatsapp-btn" href="https://wa.me/601170332316?text=Hi!%20Saya%20berminat%20nak%20semak%20ketersediaan%20slot%20Pakej%20Premium%20On-Site%20Conditioning%20(Selangor)." target="_blank" class="btn-whatsapp-big" data-i18n="pkg-cta-btn">
+                    👉 SEMAK KETERSEDIAAN SLOT & TEMPAH KONSULTASI
+                </a>
+                <span class="cta-subtext" data-i18n="pkg-cta-sub">(Sesi perbincangan awal & semakan lokasi kandang secara percuma)</span>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 IrfanAl Productions. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Translation & Navbar Script -->
+    <script>
+        const translations = {
+            en: {
+                "nav-back": "← Back to Main Page",
+                "pkg-title": "🐎 PREMIUM ON-SITE CONDITIONING PACKAGE",
+                "pkg-subtitle": "\"All expertise, sports science monitoring, and professional training programs brought straight to your stable.\"",
+                "pkg-badge": "Premium Package for 1 Endurance Horse",
+                "pkg-included-title": "📋 What Is Included In This Package?",
+                "pkg-f1-t": "Exclusive On-Site Training Sessions (10 sessions):",
+                "pkg-f1-d": "Our team travels directly to your stable according to a customized schedule to train your horse and rider.",
+                "pkg-f2-t": "Physical Audit & Baseline Fitness:",
+                "pkg-f2-d": "Comprehensive assessment of muscle structure, joints, and initial fitness baseline before starting the program.",
+                "pkg-f3-t": "Customized Conditioning Plan:",
+                "pkg-f3-d": "Structured trot, canter, and hill work routines adapted to your stable's local terrain and trails.",
+                "pkg-f4-t": "Real-Time Heart Rate Monitoring:",
+                "pkg-f4-d": "Accurate tracking and analysis of Heart Rate Recovery during active workout sessions.",
+                "pkg-bonus-title": "✨ EXCLUSIVE BONUS",
+                "pkg-bf-t": "Nutrition & Supplement Formulation:",
+                "pkg-bf-d": "Tailored feeding schedules and supplement plans formulated specifically for your endurance horse.",
+                "pkg-zone": "SELANGOR ZONE",
+                "pkg-price-old": "Original Price: RM 3,400",
+                "pkg-price-new": "Offer RM 2,590",
+                "pkg-price-unit": "/ month only",
+                "pkg-warn-title": "⚠️ SLOTS ARE STRICTLY LIMITED!",
+                "pkg-warn-desc": "Because we maintain high quality control and physically travel to your stable location, service slots are strictly limited to a few horses at a time by regional zone (SELANGOR ONLY).",
+                "pkg-cta-title": "🟢 START YOUR CONDITIONING PROGRAM TODAY",
+                "pkg-cta-desc": "Don't let minor training oversights hinder your horse's full athletic potential.",
+                "pkg-cta-btn": "👉 CHECK SLOT AVAILABILITY & BOOK CONSULTATION",
+                "pkg-cta-sub": "(Free initial consultation & stable location check)",
+                "wa-msg": "Hi! I am interested to check slot availability for the Premium On-Site Conditioning Package (Selangor)."
+            },
+            bm: {
+                "nav-back": "← Kembali ke Halaman Utama",
+                "pkg-title": "🐎 PAKEJ PREMIUM ON-SITE CONDITIONING",
+                "pkg-subtitle": "\"Semua kepakaran, pemantauan sains sukan, dan program latihan profesional dibawakan terus ke kandang anda.\"",
+                "pkg-badge": "Pakej Premium untuk 1 Ekor Kuda Endurance",
+                "pkg-included-title": "📋 Apa Yang Merangkumi Dalam Pakej Ini?",
+                "pkg-f1-t": "Sesi Latihan On-Site eksklusif (10 sesi):",
+                "pkg-f1-d": "Team kami turun terus ke kandang (stable) anda mengikut jadual khas untuk melatih kuda dan rider anda.",
+                "pkg-f2-t": "Audit Fizikal & Baseline Fitness:",
+                "pkg-f2-d": "Pemeriksaan struktur otot, sendi, dan tahap kecergasan awal kuda sebelum program bermula.",
+                "pkg-f3-t": "Pelan Conditioning Khusus:",
+                "pkg-f3-d": "Struktur latihan trot, canter, dan hill work yang disesuaikan dengan trek sedia ada di lokasi anda.",
+                "pkg-f4-t": "Pemantauan Nadi (Real-Time):",
+                "pkg-f4-d": "Menjejak kadar pemulihan jantung (Heart Rate Recovery) semasa latihan dengan betul.",
+                "pkg-bonus-title": "✨ BONUS EKSKLUSIF",
+                "pkg-bf-t": "Formulasi Pemakanan & Suplemen:",
+                "pkg-bf-d": "Merangka pelan makanan dan suplemen yang teliti untuk kuda endurance anda.",
+                "pkg-zone": "ZON SELANGOR",
+                "pkg-price-old": "Harga Asal: RM 3,400",
+                "pkg-price-new": "Offer RM 2,590",
+                "pkg-price-unit": "/ bulan sahaja",
+                "pkg-warn-title": "⚠️ SLOT SANGAT TERHAD!",
+                "pkg-warn-desc": "Memandangkan kami mengekalkan kawalan kualiti yang tinggi dan memerlukan pergerakan fizikal ke lokasi kandang anda, slot perkhidmatan ini dihadkan untuk beberapa ekor kuda sahaja pada satu-satu masa mengikut zon kawasan (SELANGOR SAHAJA).",
+                "pkg-cta-title": "🟢 MULAKAN PROGRAM CONDITIONING HARI INI",
+                "pkg-cta-desc": "Jangan biarkan kesilapan kecil dalam program latihan menjejaskan potensi kuda anda.",
+                "pkg-cta-btn": "👉 SEMAK KETERSEDIAAN SLOT & TEMPAH KONSULTASI",
+                "pkg-cta-sub": "(Sesi perbincangan awal & semakan lokasi kandang secara percuma)",
+                "wa-msg": "Hi! Saya berminat nak semak ketersediaan slot Pakej Premium On-Site Conditioning (Selangor)."
+            }
+        };
+
+        function switchLanguage(lang) {
+            localStorage.setItem('preferred_language', lang);
+
+            const btnEn = document.getElementById('lang-en');
+            const btnBm = document.getElementById('lang-bm');
+            if (btnEn) btnEn.classList.toggle('active', lang === 'en');
+            if (btnBm) btnBm.classList.toggle('active', lang === 'bm');
+
+            document.querySelectorAll('[data-i18n]').forEach(element => {
+                const key = element.getAttribute('data-i18n');
+                if (translations[lang] && translations[lang][key]) {
+                    element.textContent = translations[lang][key];
+                }
+            });
+
+            // Dynamically encode WhatsApp CTA text
+            const waBtn = document.getElementById('whatsapp-btn');
+            if (waBtn && translations[lang] && translations[lang]['wa-msg']) {
+                waBtn.href = `https://wa.me/601170332316?text=${encodeURIComponent(translations[lang]['wa-msg'])}`;
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            // Restore active language
+            const savedLang = localStorage.getItem('preferred_language') || 'bm';
+            switchLanguage(savedLang);
+
+            // Mobile Menu Toggle
+            const mobileMenuBtn = document.getElementById('mobile-menu');
+            const primaryNav = document.getElementById('primary-nav');
+
+            if (mobileMenuBtn && primaryNav) {
+                mobileMenuBtn.addEventListener('click', () => {
+                    mobileMenuBtn.classList.toggle('active');
+                    primaryNav.classList.toggle('active');
+                });
+            }
+        });
+    </script>
+</body>
+</html>
